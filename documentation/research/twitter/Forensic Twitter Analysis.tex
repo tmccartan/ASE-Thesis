@@ -29,9 +29,22 @@
   
   Intent
   
-  The purpose of this article is to find out the capability of the twitter API and how suitable it will be for acting as the storage and communication method for the thesis. This document will cover the basics of the API such as how one gains access to the API to more advanced aspects like accessing users feeds and posting on behalf of a user. T  
+  The purpose of this article is to find out the capability of the twitter API and how suitable it will be for acting as the storage and communication method for the thesis. This document will cover the basics of the API such as how one gains access to the API to more advanced aspects like accessing users feeds and posting on behalf of a user.  
+  
   Gaining access the API
+  Access to the API is given by leveraging on twitters OAuth mechanism for authorising third party apps. A summary of this process is available on the API site 
+  https://dev.twitter.com/oauth/application-only
+  
   Image Storage
+  Twitter supports the following formats for user uploading images
+  PNG
+  JPG
+  GIF
+  Animated GIF
+  WEBP
+  
+    The various image formats supported will be tricky for the stegography analysis of the uploaded images. It will    probably be decidied just to focus on one or two specific formats, rather then spend time handling all. 
+  
   REST API
     Requesting a users feed
     Creating a tweet for a user
