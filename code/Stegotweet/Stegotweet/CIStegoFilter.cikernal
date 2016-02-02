@@ -1,0 +1,4 @@
+kernel vec4 embbedMessage(sampler src, char [] message, int dither)
+{
+    
+}

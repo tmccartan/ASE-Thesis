@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7000C0F81C6142D900506329 /* CIStegoFilter.cikernal in Sources */ = {isa = PBXBuildFile; fileRef = 7000C0F71C6142D900506329 /* CIStegoFilter.cikernal */; };
 		7004B9351C44154500583D09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7004B9341C44154500583D09 /* AppDelegate.swift */; };
 		7004B9371C44154500583D09 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7004B9361C44154500583D09 /* ViewController.swift */; };
 		7004B93A1C44154500583D09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7004B9381C44154500583D09 /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7000C0F71C6142D900506329 /* CIStegoFilter.cikernal */ = {isa = PBXFileReference; explicitFileType = sourcecode.glsl; fileEncoding = 4; path = CIStegoFilter.cikernal; sourceTree = "<group>"; };
 		7004B9311C44154500583D09 /* Stegotweet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stegotweet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7004B9341C44154500583D09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7004B9361C44154500583D09 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				7004B9401C44154500583D09 /* LaunchScreen.storyboard */,
 				7004B9431C44154500583D09 /* Info.plist */,
 				7004B93B1C44154500583D09 /* Stegotweet.xcdatamodeld */,
+				7000C0F71C6142D900506329 /* CIStegoFilter.cikernal */,
 			);
 			path = Stegotweet;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 		7004B9291C44154500583D09 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Terry McCartan";
 				TargetAttributes = {
@@ -260,6 +264,7 @@
 			files = (
 				7004B9371C44154500583D09 /* ViewController.swift in Sources */,
 				7004B9351C44154500583D09 /* AppDelegate.swift in Sources */,
+				7000C0F81C6142D900506329 /* CIStegoFilter.cikernal in Sources */,
 				7004B93D1C44154500583D09 /* Stegotweet.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -402,10 +407,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Stegotweet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ucd.Stegotweet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Stegotweet/Stegotweet-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -413,10 +421,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Stegotweet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ucd.Stegotweet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Stegotweet/Stegotweet-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -487,6 +497,7 @@
 				7004B95E1C44154500583D09 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7004B95F1C44154500583D09 /* Build configuration list for PBXNativeTarget "StegotweetTests" */ = {
 			isa = XCConfigurationList;
@@ -495,6 +506,7 @@
 				7004B9611C44154500583D09 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7004B9621C44154500583D09 /* Build configuration list for PBXNativeTarget "StegotweetUITests" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +515,7 @@
 				7004B9641C44154500583D09 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
