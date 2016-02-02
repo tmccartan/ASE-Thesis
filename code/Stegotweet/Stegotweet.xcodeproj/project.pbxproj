@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7000C0F81C6142D900506329 /* CIStegoFilter.cikernal in Sources */ = {isa = PBXBuildFile; fileRef = 7000C0F71C6142D900506329 /* CIStegoFilter.cikernal */; };
+		7000C0FD1C61461500506329 /* CIStegoFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7000C0FC1C61461500506329 /* CIStegoFilter.m */; };
 		7004B9351C44154500583D09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7004B9341C44154500583D09 /* AppDelegate.swift */; };
 		7004B9371C44154500583D09 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7004B9361C44154500583D09 /* ViewController.swift */; };
 		7004B93A1C44154500583D09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7004B9381C44154500583D09 /* Main.storyboard */; };
@@ -36,7 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		7000C0F71C6142D900506329 /* CIStegoFilter.cikernal */ = {isa = PBXFileReference; explicitFileType = sourcecode.glsl; fileEncoding = 4; path = CIStegoFilter.cikernal; sourceTree = "<group>"; };
+		7000C0F71C6142D900506329 /* CIStegoFilter.cikernel */ = {isa = PBXFileReference; explicitFileType = sourcecode.glsl; fileEncoding = 4; path = CIStegoFilter.cikernel; sourceTree = "<group>"; };
+		7000C0F91C61453600506329 /* CIStegoFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CIStegoFilter.h; sourceTree = "<group>"; };
+		7000C0FC1C61461500506329 /* CIStegoFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CIStegoFilter.m; sourceTree = "<group>"; };
 		7004B9311C44154500583D09 /* Stegotweet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stegotweet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7004B9341C44154500583D09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7004B9361C44154500583D09 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -108,7 +110,9 @@
 				7004B9401C44154500583D09 /* LaunchScreen.storyboard */,
 				7004B9431C44154500583D09 /* Info.plist */,
 				7004B93B1C44154500583D09 /* Stegotweet.xcdatamodeld */,
-				7000C0F71C6142D900506329 /* CIStegoFilter.cikernal */,
+				7000C0F71C6142D900506329 /* CIStegoFilter.cikernel */,
+				7000C0F91C61453600506329 /* CIStegoFilter.h */,
+				7000C0FC1C61461500506329 /* CIStegoFilter.m */,
 			);
 			path = Stegotweet;
 			sourceTree = "<group>";
@@ -264,7 +268,7 @@
 			files = (
 				7004B9371C44154500583D09 /* ViewController.swift in Sources */,
 				7004B9351C44154500583D09 /* AppDelegate.swift in Sources */,
-				7000C0F81C6142D900506329 /* CIStegoFilter.cikernal in Sources */,
+				7000C0FD1C61461500506329 /* CIStegoFilter.m in Sources */,
 				7004B93D1C44154500583D09 /* Stegotweet.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,7 +416,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ucd.Stegotweet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Stegotweet/Stegotweet-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -426,7 +429,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ucd.Stegotweet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Stegotweet/Stegotweet-Bridging-Header.h";
 			};
 			name = Release;
 		};

@@ -1,0 +1,5 @@
+kernel vec4 stegoFilterKernel(sampler src, char [] message, int dither)
+{
+    vec2 dc = destCoord();
+    return sample(image, samplerTransform(image, dc));
+}
