@@ -7,7 +7,7 @@
         <!--Root View Controller-->
         <scene sceneID="4td-Sn-KYb">
             <objects>
-                <tableViewController id="ixT-A9-f1z" sceneMemberID="viewController">
+                <tableViewController id="ixT-A9-f1z" customClass="ThreadsTVC" customModule="Stegotweet" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="J0I-d3-LjV">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -20,6 +20,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="y4t-Lt-ye5" kind="show" id="y3v-CM-Xw4"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -32,6 +35,56 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bBz-PS-aD4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1540" y="-75"/>
+        </scene>
+        <!--Image DecipherVC-->
+        <scene sceneID="sOK-bu-CWJ">
+            <objects>
+                <viewController id="y4t-Lt-ye5" customClass="ImageDecipherVC" customModule="Stegotweet" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TFc-j0-Ucy"/>
+                        <viewControllerLayoutGuide type="bottom" id="rm2-bI-ZB6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fPC-of-E1x">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="mRK-U9-Y98">
+                                <rect key="frame" x="290" y="290" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qP7-qA-FIU">
+                                <rect key="frame" x="0.0" y="14" width="600" height="572"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qP7-qA-FIU" firstAttribute="leading" secondItem="fPC-of-E1x" secondAttribute="leading" id="IB2-nE-6zl"/>
+                            <constraint firstItem="rm2-bI-ZB6" firstAttribute="top" secondItem="qP7-qA-FIU" secondAttribute="bottom" constant="14" id="YW2-JI-V9y"/>
+                            <constraint firstAttribute="trailing" secondItem="qP7-qA-FIU" secondAttribute="trailing" id="eaq-xp-dVp"/>
+                            <constraint firstItem="qP7-qA-FIU" firstAttribute="top" secondItem="TFc-j0-Ucy" secondAttribute="bottom" constant="-6" id="x4M-EH-lgc"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pEO-YY-IqZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2325" y="-58"/>
+        </scene>
+        <!--ChatVC-->
+        <scene sceneID="74Q-Vk-T7d">
+            <objects>
+                <viewController id="j8d-tz-Yst" customClass="ChatVC" customModule="Stegotweet" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Rqd-2M-5Ee"/>
+                        <viewControllerLayoutGuide type="bottom" id="NFm-8Q-YjP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tg0-Li-IRm">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Krf-Xa-fFp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3130" y="594"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kQr-bd-xN3">
@@ -72,7 +125,7 @@
         <!--Root View Controller-->
         <scene sceneID="0XT-0U-Z2r">
             <objects>
-                <tableViewController id="Rj9-Up-fqg" sceneMemberID="viewController">
+                <tableViewController id="Rj9-Up-fqg" customClass="MentionsTVC" customModule="Stegotweet" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="gXT-YD-bMk">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -85,6 +138,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="Xh9-XS-x9H" kind="show" id="HXD-iq-8gQ"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -97,6 +153,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ldR-Jc-HPl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1510" y="1172"/>
+        </scene>
+        <!--Image EmbedderVC-->
+        <scene sceneID="tx0-Me-WeA">
+            <objects>
+                <viewController id="Xh9-XS-x9H" customClass="ImageEmbedderVC" customModule="Stegotweet" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uNX-PB-F2n"/>
+                        <viewControllerLayoutGuide type="bottom" id="aOY-Vn-kph"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vyL-vU-yg2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="POp-Qw-OJh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2325" y="1172"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qZV-lC-jTe">
