@@ -15,11 +15,10 @@ class ThreadsTVC :  UITableViewController {
     var conversations = [Conversation]()
     
     private struct StoryBoard {
-        static let CellReuseIdentifier = "ConversationCell"
+        static let CellReuseIdentifier = "ConversationTVCell"
         static let MentionsTVCSegueIdentifier = "Show"
         
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,9 +26,12 @@ class ThreadsTVC :  UITableViewController {
         let testConversation = Conversation(name: "Test Conversation 1", user: "Terry", created_at: NSDate(), last_updated_at: NSDate(), lines: [])
         let testConversation2 = Conversation(name: "Test Conversation 2", user: "Terry", created_at: NSDate(), last_updated_at: NSDate(), lines: [])
         let testConversation3 = Conversation(name: "Test Conversation 3", user: "Terry", created_at: NSDate(), last_updated_at: NSDate(), lines: [])
+        conversations.removeAll()
         conversations.append(testConversation)
         conversations.append(testConversation2)
         conversations.append(testConversation3)
+        print(conversations.capacity)
+        self.tableView.reloadData()
     }
     
     override func didReceiveMemoryWarning() {
@@ -40,7 +42,7 @@ class ThreadsTVC :  UITableViewController {
     // MARK: - Table view data source
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return conversations.count
+        return 1
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		7000C0FD1C61461500506329 /* CIStegoFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7000C0FC1C61461500506329 /* CIStegoFilter.m */; };
 		7004B9351C44154500583D09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7004B9341C44154500583D09 /* AppDelegate.swift */; };
-		7004B9371C44154500583D09 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7004B9361C44154500583D09 /* ViewController.swift */; };
 		7004B93A1C44154500583D09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7004B9381C44154500583D09 /* Main.storyboard */; };
 		7004B93D1C44154500583D09 /* Stegotweet.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7004B93B1C44154500583D09 /* Stegotweet.xcdatamodeld */; };
 		7004B93F1C44154500583D09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7004B93E1C44154500583D09 /* Assets.xcassets */; };
@@ -50,7 +49,6 @@
 		7000C0FC1C61461500506329 /* CIStegoFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CIStegoFilter.m; sourceTree = "<group>"; };
 		7004B9311C44154500583D09 /* Stegotweet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stegotweet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7004B9341C44154500583D09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7004B9361C44154500583D09 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7004B9391C44154500583D09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7004B93C1C44154500583D09 /* Stegotweet.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Stegotweet.xcdatamodel; sourceTree = "<group>"; };
 		7004B93E1C44154500583D09 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -126,17 +124,11 @@
 				709830681C6A2E7D006E37CD /* Twitter */,
 				70BC85561C63CBEC00018AFA /* CIFilters */,
 				7004B9341C44154500583D09 /* AppDelegate.swift */,
-				7004B9361C44154500583D09 /* ViewController.swift */,
 				7004B9381C44154500583D09 /* Main.storyboard */,
 				7004B93E1C44154500583D09 /* Assets.xcassets */,
 				7004B9401C44154500583D09 /* LaunchScreen.storyboard */,
 				7004B9431C44154500583D09 /* Info.plist */,
 				7004B93B1C44154500583D09 /* Stegotweet.xcdatamodeld */,
-				70BC85571C63CF4000018AFA /* ThreadsTVC.swift */,
-				70BC85591C63CF5900018AFA /* MentionsTVC.swift */,
-				70BC855B1C63CF7000018AFA /* ImageDecipherVC.swift */,
-				70BC855D1C63CF8000018AFA /* ImageEmbedderVC.swift */,
-				70BC855F1C63CF9800018AFA /* ChatVC.swift */,
 			);
 			path = Stegotweet;
 			sourceTree = "<group>";
@@ -179,6 +171,11 @@
 		709830701C6A3A8A006E37CD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				70BC85571C63CF4000018AFA /* ThreadsTVC.swift */,
+				70BC85591C63CF5900018AFA /* MentionsTVC.swift */,
+				70BC855B1C63CF7000018AFA /* ImageDecipherVC.swift */,
+				70BC855D1C63CF8000018AFA /* ImageEmbedderVC.swift */,
+				70BC855F1C63CF9800018AFA /* ChatVC.swift */,
 				709830711C6A3AA8006E37CD /* ConversationTVCell.swift */,
 			);
 			name = Views;
@@ -326,7 +323,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				70BC85601C63CF9800018AFA /* ChatVC.swift in Sources */,
-				7004B9371C44154500583D09 /* ViewController.swift in Sources */,
 				7098306D1C6A31A3006E37CD /* Conversation.swift in Sources */,
 				70BC85581C63CF4000018AFA /* ThreadsTVC.swift in Sources */,
 				70BC855C1C63CF7000018AFA /* ImageDecipherVC.swift in Sources */,

@@ -13,6 +13,13 @@ class ConversationTVCell : UITableViewCell {
     var conversationModel: Conversation? {
         didSet {
             //do init logic
+            updateCell()
         }
+    }
+    
+    @IBOutlet weak var name: UILabel!
+    
+    private func updateCell() {
+        name.text = conversationModel!.name
     }
 }
