@@ -16,6 +16,10 @@
 		7004B9421C44154500583D09 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7004B9401C44154500583D09 /* LaunchScreen.storyboard */; };
 		7004B94D1C44154500583D09 /* StegotweetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7004B94C1C44154500583D09 /* StegotweetTests.swift */; };
 		7004B9581C44154500583D09 /* StegotweetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7004B9571C44154500583D09 /* StegotweetUITests.swift */; };
+		7098306A1C6A2EA0006E37CD /* TwitterAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709830691C6A2EA0006E37CD /* TwitterAPI.swift */; };
+		7098306D1C6A31A3006E37CD /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7098306C1C6A31A3006E37CD /* Conversation.swift */; };
+		7098306F1C6A32A5006E37CD /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7098306E1C6A32A5006E37CD /* Line.swift */; };
+		709830721C6A3AA8006E37CD /* ConversationTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709830711C6A3AA8006E37CD /* ConversationTVCell.swift */; };
 		70BC85581C63CF4000018AFA /* ThreadsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BC85571C63CF4000018AFA /* ThreadsTVC.swift */; };
 		70BC855A1C63CF5900018AFA /* MentionsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BC85591C63CF5900018AFA /* MentionsTVC.swift */; };
 		70BC855C1C63CF7000018AFA /* ImageDecipherVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BC855B1C63CF7000018AFA /* ImageDecipherVC.swift */; };
@@ -58,6 +62,10 @@
 		7004B9531C44154500583D09 /* StegotweetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StegotweetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7004B9571C44154500583D09 /* StegotweetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StegotweetUITests.swift; sourceTree = "<group>"; };
 		7004B9591C44154500583D09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		709830691C6A2EA0006E37CD /* TwitterAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterAPI.swift; sourceTree = "<group>"; };
+		7098306C1C6A31A3006E37CD /* Conversation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
+		7098306E1C6A32A5006E37CD /* Line.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
+		709830711C6A3AA8006E37CD /* ConversationTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationTVCell.swift; sourceTree = "<group>"; };
 		70BC85571C63CF4000018AFA /* ThreadsTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreadsTVC.swift; sourceTree = "<group>"; };
 		70BC85591C63CF5900018AFA /* MentionsTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MentionsTVC.swift; sourceTree = "<group>"; };
 		70BC855B1C63CF7000018AFA /* ImageDecipherVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDecipherVC.swift; sourceTree = "<group>"; };
@@ -113,6 +121,9 @@
 		7004B9331C44154500583D09 /* Stegotweet */ = {
 			isa = PBXGroup;
 			children = (
+				709830701C6A3A8A006E37CD /* Views */,
+				7098306B1C6A3181006E37CD /* Models */,
+				709830681C6A2E7D006E37CD /* Twitter */,
 				70BC85561C63CBEC00018AFA /* CIFilters */,
 				7004B9341C44154500583D09 /* AppDelegate.swift */,
 				7004B9361C44154500583D09 /* ViewController.swift */,
@@ -146,6 +157,31 @@
 				7004B9591C44154500583D09 /* Info.plist */,
 			);
 			path = StegotweetUITests;
+			sourceTree = "<group>";
+		};
+		709830681C6A2E7D006E37CD /* Twitter */ = {
+			isa = PBXGroup;
+			children = (
+				709830691C6A2EA0006E37CD /* TwitterAPI.swift */,
+			);
+			name = Twitter;
+			sourceTree = "<group>";
+		};
+		7098306B1C6A3181006E37CD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7098306C1C6A31A3006E37CD /* Conversation.swift */,
+				7098306E1C6A32A5006E37CD /* Line.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		709830701C6A3A8A006E37CD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				709830711C6A3AA8006E37CD /* ConversationTVCell.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		70BC85561C63CBEC00018AFA /* CIFilters */ = {
@@ -291,12 +327,16 @@
 			files = (
 				70BC85601C63CF9800018AFA /* ChatVC.swift in Sources */,
 				7004B9371C44154500583D09 /* ViewController.swift in Sources */,
+				7098306D1C6A31A3006E37CD /* Conversation.swift in Sources */,
 				70BC85581C63CF4000018AFA /* ThreadsTVC.swift in Sources */,
 				70BC855C1C63CF7000018AFA /* ImageDecipherVC.swift in Sources */,
+				709830721C6A3AA8006E37CD /* ConversationTVCell.swift in Sources */,
 				7004B9351C44154500583D09 /* AppDelegate.swift in Sources */,
 				70BC855E1C63CF8000018AFA /* ImageEmbedderVC.swift in Sources */,
 				7000C0FD1C61461500506329 /* CIStegoFilter.m in Sources */,
 				70BC855A1C63CF5900018AFA /* MentionsTVC.swift in Sources */,
+				7098306F1C6A32A5006E37CD /* Line.swift in Sources */,
+				7098306A1C6A2EA0006E37CD /* TwitterAPI.swift in Sources */,
 				7004B93D1C44154500583D09 /* Stegotweet.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

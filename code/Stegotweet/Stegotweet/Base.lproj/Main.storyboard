@@ -17,11 +17,11 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="L0a-Jl-oIB" id="EYr-xc-y29">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="y4t-Lt-ye5" kind="show" id="y3v-CM-Xw4"/>
+                                    <segue destination="j8d-tz-Yst" kind="show" id="axg-oJ-bx8"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -48,25 +48,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="mRK-U9-Y98">
-                                <rect key="frame" x="290" y="290" width="20" height="20"/>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="mRK-U9-Y98">
+                                <rect key="frame" x="290" y="283" width="20" height="20"/>
                             </activityIndicatorView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qP7-qA-FIU">
-                                <rect key="frame" x="0.0" y="14" width="600" height="572"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qP7-qA-FIU">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="586"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="qP7-qA-FIU" firstAttribute="leading" secondItem="fPC-of-E1x" secondAttribute="leading" id="IB2-nE-6zl"/>
-                            <constraint firstItem="rm2-bI-ZB6" firstAttribute="top" secondItem="qP7-qA-FIU" secondAttribute="bottom" constant="14" id="YW2-JI-V9y"/>
+                            <constraint firstItem="qP7-qA-FIU" firstAttribute="centerX" secondItem="mRK-U9-Y98" secondAttribute="centerX" id="Ahb-Ud-1bM"/>
+                            <constraint firstItem="qP7-qA-FIU" firstAttribute="top" secondItem="fPC-of-E1x" secondAttribute="top" id="S2n-4t-Vvs"/>
+                            <constraint firstItem="qP7-qA-FIU" firstAttribute="centerY" secondItem="mRK-U9-Y98" secondAttribute="centerY" id="Sak-4K-aQU"/>
+                            <constraint firstItem="rm2-bI-ZB6" firstAttribute="top" secondItem="qP7-qA-FIU" secondAttribute="bottom" constant="-35" id="YW2-JI-V9y"/>
                             <constraint firstAttribute="trailing" secondItem="qP7-qA-FIU" secondAttribute="trailing" id="eaq-xp-dVp"/>
-                            <constraint firstItem="qP7-qA-FIU" firstAttribute="top" secondItem="TFc-j0-Ucy" secondAttribute="bottom" constant="-6" id="x4M-EH-lgc"/>
+                            <constraint firstItem="qP7-qA-FIU" firstAttribute="leading" secondItem="fPC-of-E1x" secondAttribute="leading" id="lY7-FL-lmg"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pEO-YY-IqZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2325" y="-58"/>
+            <point key="canvasLocation" x="3328" y="-396"/>
         </scene>
         <!--ChatVC-->
         <scene sceneID="74Q-Vk-T7d">
@@ -84,7 +86,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Krf-Xa-fFp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3130" y="594"/>
+            <point key="canvasLocation" x="2440" y="260"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kQr-bd-xN3">
@@ -135,11 +137,11 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KgH-Fy-Mz2" id="3d0-I5-IKa">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="Xh9-XS-x9H" kind="show" id="HXD-iq-8gQ"/>
+                                    <segue destination="j8d-tz-Yst" kind="show" id="6u0-8c-xJZ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -152,7 +154,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ldR-Jc-HPl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1510" y="1172"/>
+            <point key="canvasLocation" x="1696" y="1000"/>
         </scene>
         <!--Image EmbedderVC-->
         <scene sceneID="tx0-Me-WeA">
@@ -170,7 +172,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="POp-Qw-OJh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2325" y="1172"/>
+            <point key="canvasLocation" x="3245" y="814"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qZV-lC-jTe">
@@ -190,4 +192,7 @@
             <point key="canvasLocation" x="644" y="1172"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="axg-oJ-bx8"/>
+    </inferredMetricsTieBreakers>
 </document>
