@@ -19,6 +19,7 @@ class TweetTVCell: UITableViewCell {
     @IBOutlet weak var txtScreenName: UILabel!
     @IBOutlet weak var imgTweetPic: UIImageView!
     @IBOutlet weak var txtTweetContent: UILabel!
+    @IBOutlet weak var imgMedia: UIImageView!
     @IBOutlet weak var txtDate: UILabel!
     // MARK - Part2.1
     var hashtagColor = UIColor.blueColor()
@@ -51,6 +52,12 @@ class TweetTVCell: UITableViewCell {
             // blocks main thread!
             imgTweetPic?.image = UIImage(data: imageData!)
         }
+        if let mediaImageURL = tweet!.media.first?.url {
+            let imageData = NSData(contentsOfURL: mediaImageURL)
+            // blocks main thread!
+            imgMedia?.image = UIImage(data: imageData!)
+        }
+        
         
         let formatter = NSDateFormatter()
         if NSDate().timeIntervalSinceDate(tweet!.created) > 24*60*60 {
@@ -62,9 +69,9 @@ class TweetTVCell: UITableViewCell {
         
         // show accessory if need be
         if tweet!.hashtags.count + tweet!.urls.count + tweet!.userMentions.count + tweet!.media.count > 0 {
-            accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
+       //     accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
         } else {
-            accessoryType = UITableViewCellAccessoryType.None
+       //     accessoryType = UITableViewCellAccessoryType.None
         }
 
         

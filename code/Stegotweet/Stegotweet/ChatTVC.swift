@@ -12,7 +12,7 @@ import UIKit
 class ChatTVC :  UITableViewController {
     
     let hashtag: String = "#ThanksPaulie"
-    let mention: String = "&@Paul_OConnell"
+    let mention: String = "&@Paul_OConnell&filter:images"
     // need to add mention as well
     var tweets = [[Tweet]]()
     
@@ -23,7 +23,6 @@ class ChatTVC :  UITableViewController {
             dispatch_async(dispatch_get_main_queue()) { () -> Void in
                 print(newTweets)
                 if newTweets.count > 0 {
-                    
                     self.tweets.insert(newTweets, atIndex: 0)
                     self.tableView.reloadData()
                 }
