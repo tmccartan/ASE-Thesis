@@ -19,11 +19,12 @@
 		7098306D1C6A31A3006E37CD /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7098306C1C6A31A3006E37CD /* Conversation.swift */; };
 		7098306F1C6A32A5006E37CD /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7098306E1C6A32A5006E37CD /* Line.swift */; };
 		709830721C6A3AA8006E37CD /* ConversationTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709830711C6A3AA8006E37CD /* ConversationTVCell.swift */; };
+		709830741C6A69FF006E37CD /* TweetTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709830731C6A69FF006E37CD /* TweetTVCell.swift */; };
 		70BC85581C63CF4000018AFA /* ThreadsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BC85571C63CF4000018AFA /* ThreadsTVC.swift */; };
 		70BC855A1C63CF5900018AFA /* MentionsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BC85591C63CF5900018AFA /* MentionsTVC.swift */; };
 		70BC855C1C63CF7000018AFA /* ImageDecipherVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BC855B1C63CF7000018AFA /* ImageDecipherVC.swift */; };
 		70BC855E1C63CF8000018AFA /* ImageEmbedderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BC855D1C63CF8000018AFA /* ImageEmbedderVC.swift */; };
-		70BC85601C63CF9800018AFA /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BC855F1C63CF9800018AFA /* ChatVC.swift */; };
+		70BC85601C63CF9800018AFA /* ChatTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BC855F1C63CF9800018AFA /* ChatTVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,11 +65,12 @@
 		7098306C1C6A31A3006E37CD /* Conversation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
 		7098306E1C6A32A5006E37CD /* Line.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
 		709830711C6A3AA8006E37CD /* ConversationTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationTVCell.swift; sourceTree = "<group>"; };
+		709830731C6A69FF006E37CD /* TweetTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetTVCell.swift; sourceTree = "<group>"; };
 		70BC85571C63CF4000018AFA /* ThreadsTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreadsTVC.swift; sourceTree = "<group>"; };
 		70BC85591C63CF5900018AFA /* MentionsTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MentionsTVC.swift; sourceTree = "<group>"; };
 		70BC855B1C63CF7000018AFA /* ImageDecipherVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDecipherVC.swift; sourceTree = "<group>"; };
 		70BC855D1C63CF8000018AFA /* ImageEmbedderVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageEmbedderVC.swift; sourceTree = "<group>"; };
-		70BC855F1C63CF9800018AFA /* ChatVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
+		70BC855F1C63CF9800018AFA /* ChatTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatTVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,8 +177,9 @@
 				70BC85591C63CF5900018AFA /* MentionsTVC.swift */,
 				70BC855B1C63CF7000018AFA /* ImageDecipherVC.swift */,
 				70BC855D1C63CF8000018AFA /* ImageEmbedderVC.swift */,
-				70BC855F1C63CF9800018AFA /* ChatVC.swift */,
+				70BC855F1C63CF9800018AFA /* ChatTVC.swift */,
 				709830711C6A3AA8006E37CD /* ConversationTVCell.swift */,
+				709830731C6A69FF006E37CD /* TweetTVCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -322,13 +325,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70BC85601C63CF9800018AFA /* ChatVC.swift in Sources */,
+				70BC85601C63CF9800018AFA /* ChatTVC.swift in Sources */,
 				7098306D1C6A31A3006E37CD /* Conversation.swift in Sources */,
 				70BC85581C63CF4000018AFA /* ThreadsTVC.swift in Sources */,
 				70BC855C1C63CF7000018AFA /* ImageDecipherVC.swift in Sources */,
 				709830721C6A3AA8006E37CD /* ConversationTVCell.swift in Sources */,
 				7004B9351C44154500583D09 /* AppDelegate.swift in Sources */,
 				70BC855E1C63CF8000018AFA /* ImageEmbedderVC.swift in Sources */,
+				709830741C6A69FF006E37CD /* TweetTVCell.swift in Sources */,
 				7000C0FD1C61461500506329 /* CIStegoFilter.m in Sources */,
 				70BC855A1C63CF5900018AFA /* MentionsTVC.swift in Sources */,
 				7098306F1C6A32A5006E37CD /* Line.swift in Sources */,
