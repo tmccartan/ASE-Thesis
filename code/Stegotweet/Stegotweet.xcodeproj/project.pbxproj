@@ -20,6 +20,7 @@
 		7098306F1C6A32A5006E37CD /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7098306E1C6A32A5006E37CD /* Line.swift */; };
 		709830721C6A3AA8006E37CD /* ConversationTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709830711C6A3AA8006E37CD /* ConversationTVCell.swift */; };
 		709830741C6A69FF006E37CD /* TweetTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709830731C6A69FF006E37CD /* TweetTVCell.swift */; };
+		709830761C6C7FE5006E37CD /* NewTweetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709830751C6C7FE5006E37CD /* NewTweetVC.swift */; };
 		70BC85581C63CF4000018AFA /* ThreadsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BC85571C63CF4000018AFA /* ThreadsTVC.swift */; };
 		70BC855A1C63CF5900018AFA /* MentionsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BC85591C63CF5900018AFA /* MentionsTVC.swift */; };
 		70BC855C1C63CF7000018AFA /* ImageDecipherVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BC855B1C63CF7000018AFA /* ImageDecipherVC.swift */; };
@@ -66,6 +67,7 @@
 		7098306E1C6A32A5006E37CD /* Line.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
 		709830711C6A3AA8006E37CD /* ConversationTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationTVCell.swift; sourceTree = "<group>"; };
 		709830731C6A69FF006E37CD /* TweetTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetTVCell.swift; sourceTree = "<group>"; };
+		709830751C6C7FE5006E37CD /* NewTweetVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewTweetVC.swift; sourceTree = "<group>"; };
 		70BC85571C63CF4000018AFA /* ThreadsTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreadsTVC.swift; sourceTree = "<group>"; };
 		70BC85591C63CF5900018AFA /* MentionsTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MentionsTVC.swift; sourceTree = "<group>"; };
 		70BC855B1C63CF7000018AFA /* ImageDecipherVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDecipherVC.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 				70BC855F1C63CF9800018AFA /* ChatTVC.swift */,
 				709830711C6A3AA8006E37CD /* ConversationTVCell.swift */,
 				709830731C6A69FF006E37CD /* TweetTVCell.swift */,
+				709830751C6C7FE5006E37CD /* NewTweetVC.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 				7000C0FD1C61461500506329 /* CIStegoFilter.m in Sources */,
 				70BC855A1C63CF5900018AFA /* MentionsTVC.swift in Sources */,
 				7098306F1C6A32A5006E37CD /* Line.swift in Sources */,
+				709830761C6C7FE5006E37CD /* NewTweetVC.swift in Sources */,
 				7098306A1C6A2EA0006E37CD /* TwitterAPI.swift in Sources */,
 				7004B93D1C44154500583D09 /* Stegotweet.xcdatamodeld in Sources */,
 			);
