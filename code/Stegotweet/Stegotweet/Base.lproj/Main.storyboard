@@ -277,21 +277,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="mRK-U9-Y98">
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="mRK-U9-Y98">
                                 <rect key="frame" x="290" y="308" width="20" height="20"/>
                             </activityIndicatorView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qP7-qA-FIU">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qP7-qA-FIU">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="635"/>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="qP7-qA-FIU" firstAttribute="centerX" secondItem="mRK-U9-Y98" secondAttribute="centerX" id="Ahb-Ud-1bM"/>
-                            <constraint firstItem="qP7-qA-FIU" firstAttribute="top" secondItem="fPC-of-E1x" secondAttribute="top" id="S2n-4t-Vvs"/>
-                            <constraint firstItem="qP7-qA-FIU" firstAttribute="centerY" secondItem="mRK-U9-Y98" secondAttribute="centerY" id="Sak-4K-aQU"/>
-                            <constraint firstItem="rm2-bI-ZB6" firstAttribute="top" secondItem="qP7-qA-FIU" secondAttribute="bottom" constant="-35" id="YW2-JI-V9y"/>
-                            <constraint firstAttribute="trailing" secondItem="qP7-qA-FIU" secondAttribute="trailing" id="eaq-xp-dVp"/>
-                            <constraint firstItem="qP7-qA-FIU" firstAttribute="leading" secondItem="fPC-of-E1x" secondAttribute="leading" id="lY7-FL-lmg"/>
+                            <constraint firstItem="qP7-qA-FIU" firstAttribute="leading" secondItem="fPC-of-E1x" secondAttribute="leading" id="6dT-h9-SfE"/>
+                            <constraint firstItem="qP7-qA-FIU" firstAttribute="centerX" secondItem="mRK-U9-Y98" secondAttribute="centerX" id="97q-Zm-XUs"/>
+                            <constraint firstItem="qP7-qA-FIU" firstAttribute="centerY" secondItem="mRK-U9-Y98" secondAttribute="centerY" id="Ooh-DU-sQg"/>
+                            <constraint firstItem="qP7-qA-FIU" firstAttribute="top" secondItem="fPC-of-E1x" secondAttribute="top" id="YBE-ah-xdf"/>
+                            <constraint firstAttribute="trailing" secondItem="qP7-qA-FIU" secondAttribute="trailing" id="gnc-UH-22j"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="qP7-qA-FIU" secondAttribute="bottom" constant="-35" id="ze0-uH-bZD"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -339,7 +339,7 @@
         <scene sceneID="0XT-0U-Z2r">
             <objects>
                 <tableViewController title="MentionsTVC" id="Rj9-Up-fqg" customClass="MentionsTVC" customModule="Stegotweet" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="gXT-YD-bMk">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="669" sectionHeaderHeight="28" sectionFooterHeight="28" id="gXT-YD-bMk">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -350,11 +350,11 @@
                             <textInputTraits key="textInputTraits" keyboardType="twitter"/>
                         </textField>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="1Q9-hF-U1H">
-                                <rect key="frame" x="0.0" y="122" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Mentions" rowHeight="669" id="1Q9-hF-U1H">
+                                <rect key="frame" x="0.0" y="122" width="600" height="669"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1Q9-hF-U1H" id="QQJ-m2-xn7">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="668"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
