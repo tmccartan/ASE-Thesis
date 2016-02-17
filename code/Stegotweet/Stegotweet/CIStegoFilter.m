@@ -27,7 +27,7 @@ static CIKernel *stegoFilterKernel = nil;
             NSLog(@"ERROR while loading from file: %@", error);
             // …
         }
-        NSArray     *kernels = [CIKernel kernelsWithString: content]; 
+        NSArray *kernels = [CIKernel kernelsWithString: content];
         stegoFilterKernel = kernels[0];
         
     }

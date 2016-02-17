@@ -9,6 +9,9 @@
 import Foundation
 import UIKit
 
+
 class ImageEmbedderVC :  UIViewController {
+    
+    var cifiler = CIStegoFilter()
     
 }

@@ -64,6 +64,7 @@
 		7004B9571C44154500583D09 /* StegotweetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StegotweetUITests.swift; sourceTree = "<group>"; };
 		7004B9591C44154500583D09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70271FC71C73662B0079DD9B /* MentionTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MentionTVCell.swift; sourceTree = "<group>"; };
+		70271FCD1C7495BB0079DD9B /* Stegotweet-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Stegotweet-Bridging-Header.h"; sourceTree = "<group>"; };
 		709830691C6A2EA0006E37CD /* TwitterAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterAPI.swift; sourceTree = "<group>"; };
 		7098306C1C6A31A3006E37CD /* Conversation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
 		7098306E1C6A32A5006E37CD /* Line.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
@@ -135,6 +136,7 @@
 				7004B9401C44154500583D09 /* LaunchScreen.storyboard */,
 				7004B9431C44154500583D09 /* Info.plist */,
 				7004B93B1C44154500583D09 /* Stegotweet.xcdatamodeld */,
+				70271FCD1C7495BB0079DD9B /* Stegotweet-Bridging-Header.h */,
 			);
 			path = Stegotweet;
 			sourceTree = "<group>";
@@ -492,6 +494,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ucd.Stegotweet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/web/ASE-Thesis/code/Stegotweet/Stegotweet/Stegotweet-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -505,6 +508,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ucd.Stegotweet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/web/ASE-Thesis/code/Stegotweet/Stegotweet/Stegotweet-Bridging-Header.h";
 			};
 			name = Release;
 		};

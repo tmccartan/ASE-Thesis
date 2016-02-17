@@ -350,11 +350,11 @@
                             <textInputTraits key="textInputTraits" keyboardType="twitter"/>
                         </textField>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MentionCell" rowHeight="241" id="1Q9-hF-U1H" customClass="MentionTVCell" customModule="Stegotweet" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="122" width="600" height="241"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MentionCell" rowHeight="195" id="1Q9-hF-U1H" customClass="MentionTVCell" customModule="Stegotweet" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="122" width="600" height="195"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1Q9-hF-U1H" id="QQJ-m2-xn7">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="240"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="194"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7LO-XZ-MVb">
                                             <rect key="frame" x="8" y="8" width="62" height="61"/>
@@ -383,7 +383,7 @@
                                         <constraint firstItem="d23-g5-A0t" firstAttribute="leading" secondItem="OBe-u0-OzA" secondAttribute="leading" id="N4h-Ft-MFS"/>
                                         <constraint firstAttribute="leadingMargin" secondItem="7LO-XZ-MVb" secondAttribute="leading" id="RZU-Gt-ejd"/>
                                         <constraint firstItem="d23-g5-A0t" firstAttribute="top" secondItem="7LO-XZ-MVb" secondAttribute="top" id="X69-U5-E8t"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="OBe-u0-OzA" secondAttribute="bottom" constant="76" id="cCC-ye-Sw7"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="OBe-u0-OzA" secondAttribute="bottom" constant="30" id="cCC-ye-Sw7"/>
                                         <constraint firstAttribute="topMargin" secondItem="7LO-XZ-MVb" secondAttribute="top" id="rHT-nI-Dm9"/>
                                         <constraint firstItem="d23-g5-A0t" firstAttribute="leading" secondItem="7LO-XZ-MVb" secondAttribute="trailing" constant="8" symbolic="YES" id="rfJ-wS-ztg"/>
                                     </constraints>
