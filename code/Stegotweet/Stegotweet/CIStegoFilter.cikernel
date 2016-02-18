@@ -1,5 +1,7 @@
-kernel vec4 stegoFilterKernel(sampler src, char [] message, int dither)
+kernel vec4 adjustPixelValue(sampler image, float delta)
 {
-    vec2 dc = destCoord();
-    return sample(image, samplerTransform(image, dc));
+    delta = 0.0025;
+    vec4 cur = sample(image, samplerCoord(image));
+    cur.r = cur.r + delta;
+    return cur;
 }
