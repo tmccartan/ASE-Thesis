@@ -30,6 +30,7 @@ static CIKernel *stegoFilterKernel = nil;
         NSArray *kernels = [CIKernel kernelsWithString: content];
         stegoFilterKernel = kernels[0];
         
+        
     }
     return [super init];
 }

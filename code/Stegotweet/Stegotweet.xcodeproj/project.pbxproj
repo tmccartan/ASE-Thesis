@@ -16,6 +16,7 @@
 		7004B94D1C44154500583D09 /* StegotweetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7004B94C1C44154500583D09 /* StegotweetTests.swift */; };
 		7004B9581C44154500583D09 /* StegotweetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7004B9571C44154500583D09 /* StegotweetUITests.swift */; };
 		70271FC81C73662B0079DD9B /* MentionTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70271FC71C73662B0079DD9B /* MentionTVCell.swift */; };
+		70271FCF1C7B74840079DD9B /* CIStegoFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70271FCE1C7B74840079DD9B /* CIStegoFilter.swift */; };
 		7098306A1C6A2EA0006E37CD /* TwitterAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709830691C6A2EA0006E37CD /* TwitterAPI.swift */; };
 		7098306D1C6A31A3006E37CD /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7098306C1C6A31A3006E37CD /* Conversation.swift */; };
 		7098306F1C6A32A5006E37CD /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7098306E1C6A32A5006E37CD /* Line.swift */; };
@@ -65,6 +66,7 @@
 		7004B9591C44154500583D09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70271FC71C73662B0079DD9B /* MentionTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MentionTVCell.swift; sourceTree = "<group>"; };
 		70271FCD1C7495BB0079DD9B /* Stegotweet-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Stegotweet-Bridging-Header.h"; sourceTree = "<group>"; };
+		70271FCE1C7B74840079DD9B /* CIStegoFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CIStegoFilter.swift; sourceTree = "<group>"; };
 		709830691C6A2EA0006E37CD /* TwitterAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterAPI.swift; sourceTree = "<group>"; };
 		7098306C1C6A31A3006E37CD /* Conversation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
 		7098306E1C6A32A5006E37CD /* Line.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 				7000C0F71C6142D900506329 /* CIStegoFilter.cikernel */,
 				7000C0F91C61453600506329 /* CIStegoFilter.h */,
 				7000C0FC1C61461500506329 /* CIStegoFilter.m */,
+				70271FCE1C7B74840079DD9B /* CIStegoFilter.swift */,
 			);
 			name = CIFilters;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 			files = (
 				70BC85601C63CF9800018AFA /* ChatTVC.swift in Sources */,
 				7098306D1C6A31A3006E37CD /* Conversation.swift in Sources */,
+				70271FCF1C7B74840079DD9B /* CIStegoFilter.swift in Sources */,
 				70BC85581C63CF4000018AFA /* ThreadsTVC.swift in Sources */,
 				70271FC81C73662B0079DD9B /* MentionTVCell.swift in Sources */,
 				70BC855C1C63CF7000018AFA /* ImageDecipherVC.swift in Sources */,
