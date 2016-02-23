@@ -420,8 +420,33 @@
                     <view key="view" contentMode="scaleToFill" id="vyL-vU-yg2">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="T9b-tb-fE7">
+                                <rect key="frame" x="20" y="106" width="280" height="173"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="M60-Xf-58n"/>
+                                    <constraint firstAttribute="height" constant="173" id="cfZ-dq-fHI"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="T9b-tb-fE7" firstAttribute="top" secondItem="uNX-PB-F2n" secondAttribute="bottom" constant="42" id="1dN-iO-SS5"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="T9b-tb-fE7" secondAttribute="leading" id="EcH-2t-5Py"/>
+                            <constraint firstItem="T9b-tb-fE7" firstAttribute="top" secondItem="uNX-PB-F2n" secondAttribute="bottom" constant="8" id="Ext-ht-b3u"/>
+                            <constraint firstItem="T9b-tb-fE7" firstAttribute="top" secondItem="uNX-PB-F2n" secondAttribute="bottom" constant="42" id="Yg7-0h-luI"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="T9b-tb-fE7" secondAttribute="leading" id="Zrw-DD-ov3"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="1dN-iO-SS5"/>
+                                <exclude reference="Ext-ht-b3u"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="T9b-tb-fE7" id="7e4-zn-SN2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="POp-Qw-OJh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

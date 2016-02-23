@@ -17,6 +17,7 @@
 		7004B9581C44154500583D09 /* StegotweetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7004B9571C44154500583D09 /* StegotweetUITests.swift */; };
 		70271FC81C73662B0079DD9B /* MentionTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70271FC71C73662B0079DD9B /* MentionTVCell.swift */; };
 		70271FCF1C7B74840079DD9B /* CIStegoFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70271FCE1C7B74840079DD9B /* CIStegoFilter.swift */; };
+		70271FD11C7BA9970079DD9B /* image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 70271FD01C7BA9970079DD9B /* image.jpg */; };
 		7098306A1C6A2EA0006E37CD /* TwitterAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709830691C6A2EA0006E37CD /* TwitterAPI.swift */; };
 		7098306D1C6A31A3006E37CD /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7098306C1C6A31A3006E37CD /* Conversation.swift */; };
 		7098306F1C6A32A5006E37CD /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7098306E1C6A32A5006E37CD /* Line.swift */; };
@@ -67,6 +68,7 @@
 		70271FC71C73662B0079DD9B /* MentionTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MentionTVCell.swift; sourceTree = "<group>"; };
 		70271FCD1C7495BB0079DD9B /* Stegotweet-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Stegotweet-Bridging-Header.h"; sourceTree = "<group>"; };
 		70271FCE1C7B74840079DD9B /* CIStegoFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CIStegoFilter.swift; sourceTree = "<group>"; };
+		70271FD01C7BA9970079DD9B /* image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image.jpg; sourceTree = "<group>"; };
 		709830691C6A2EA0006E37CD /* TwitterAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterAPI.swift; sourceTree = "<group>"; };
 		7098306C1C6A31A3006E37CD /* Conversation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
 		7098306E1C6A32A5006E37CD /* Line.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 		7004B9331C44154500583D09 /* Stegotweet */ = {
 			isa = PBXGroup;
 			children = (
+				70271FD01C7BA9970079DD9B /* image.jpg */,
 				709830701C6A3A8A006E37CD /* Views */,
 				7098306B1C6A3181006E37CD /* Models */,
 				709830681C6A2E7D006E37CD /* Twitter */,
@@ -312,6 +315,7 @@
 				7004B9421C44154500583D09 /* LaunchScreen.storyboard in Resources */,
 				7004B93F1C44154500583D09 /* Assets.xcassets in Resources */,
 				7004B93A1C44154500583D09 /* Main.storyboard in Resources */,
+				70271FD11C7BA9970079DD9B /* image.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
