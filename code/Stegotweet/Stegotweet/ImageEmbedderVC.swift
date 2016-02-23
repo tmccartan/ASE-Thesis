@@ -15,6 +15,7 @@ class ImageEmbedderVC :  UIViewController {
     var stegoFilter = CIStegoFilter()
 
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var outputImg: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +24,7 @@ class ImageEmbedderVC :  UIViewController {
         let beginImage = CIImage(contentsOfURL: NSURL.fileURLWithPath("/web/ASE-Thesis/code/Stegotweet/Stegotweet/image.jpg"));
         let embeddedimage = stegoFilter.embedImage(beginImage!, secretMessage: "Test Message");
         let newImage = UIImage(CIImage: embeddedimage);
-        self.imageView.image = newImage;
+        self.imageView.image = UIImage(CIImage: beginImage!);
+        self.outputImg.image = newImage;
     }
 }
