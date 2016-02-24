@@ -22,7 +22,7 @@ class ImageEmbedderVC :  UIViewController {
         
         //let fileURL = NSBundle.mainBundle().URLForResource("image", withExtension: "jpgf");
         let beginImage = CIImage(contentsOfURL: NSURL.fileURLWithPath("/web/ASE-Thesis/code/Stegotweet/Stegotweet/image.jpg"));
-        let embeddedimage = stegoFilter.embedImage(beginImage!, secretMessage: "Test Message");
+        let embeddedimage = stegoFilter.embedImage(beginImage!, secretMessage: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque interdum rutrum sodales. Nullam mattis fermentum libero, non volutpat.");
         let newImage = UIImage(CIImage: embeddedimage);
         self.imageView.image = UIImage(CIImage: beginImage!);
         self.outputImg.image = newImage;

@@ -1,16 +1,17 @@
-kernel vec4 adjustPixelValue(sampler image, float embeddedByte, vec2 coord)
+kernel vec4 adjustPixelValue(sampler image, vec3 info)
 {
     // IF CURRENT COOR == SPECIFIED COORD
     // CHANGE THAT PIXEL ELSE RETURN THE OTHER PIXEL
-    vec2 curCoord = destCoord(); // 5
-    vec2 diff = coord - curCoord;
-    float len = length(diff);
-    //	float alpha = compare( distance - threshold, 0.0, 1.0 )
-    vec4 cur1 = sample(image, coord);
-    cur1.r = 1.0;
-    cur1.b = 0.0;
-    cur1.g = 0.0;
-    vec4 cur = sample(image, samplerCoord(image));
+    vec2 coord = samplerTransform(image, vec2(info.x, info.y));
+    vec2 curCor = samplerCoord(image);
+    float xrange = floor(curCor.x - coord.x) == 0.0 ?  1.0 : 0.0;
+    float yrange = floor(curCor.y - coord.y) == 0.0 ?  1.0 : 0.0;
     
-    return mix(cur1, cur, clamp(len -1.0, 0.0, 1.0));
+    float inrange = (xrange + yrange) == 2.0 ? 1.0 : 0.0;
+
+    vec4 cur = sample(image, samplerCoord(image));
+    cur.r = cur.r + inrange * (0.0 - (cur.r));
+    cur.b = cur.b + inrange * (0.0 - (cur.b));
+    cur.g = cur.g + inrange * (0.0 - (cur.g));
+    return cur;
 }

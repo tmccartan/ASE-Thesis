@@ -47,23 +47,24 @@ class CIStegoFilter : CIFilter {
         // encode bit into image section
         message = secretMessage
         inputImage = image;
-
+        
         let buf = [UInt8](message!.utf8)
-        var xcoord : CGFloat = 10;
-        var ycoord : CGFloat = 10;
+        print(buf.capacity);
+        var xcoord : CGFloat = 1;
+        var ycoord : CGFloat = 400;
+        var args = [image as AnyObject];
+        args.append(Int(0) as AnyObject);
+        args.append(CIVector(CGPoint: CGPoint(x: xcoord, y: ycoord)));
+        
         //let height :CGFloat = 20;
         //let width: CGFloat = 20;
         for byte in buf {
-            let strBits = String(UInt(byte), radix: 2);
-            let bits = strBits.characters.map { String($0) }
-
-            for bit in bits {
-                var args = [image as AnyObject];
-                args.append(Int(bit) as! AnyObject);
-                args.append(CIVector(CGPoint: CGPoint(x: xcoord, y: ycoord)));
+        
+                var args = [inputImage as! AnyObject];
+                //args.append(Int(byte) as AnyObject);
+                args.append(CIVector(x: xcoord, y: ycoord, z: CGFloat(byte)));
                 let dod  = image.extent;
                 inputImage = kernel!.applyWithExtent(dod, roiCallback: {(n : Int32, rect: CGRect) -> CGRect in return rect; }, arguments: args)!;
-                print(String(xcoord)+" , "+String(ycoord))
                 
                 if(xcoord >= image.extent.width) {
                     xcoord = 0;
@@ -71,11 +72,8 @@ class CIStegoFilter : CIFilter {
                 }
                 else{
                     xcoord = xcoord + 1;
-                }
-                
             }
         }
-        
         return inputImage!;
     }
     
