@@ -1,3 +1,7 @@
+float dither = 10.0;
+
+kernel vec4 adjustPixelValue(
+
 kernel vec4 adjustPixelValue(sampler image, vec3 info)
 {
     // IF CURRENT COOR == SPECIFIED COORD
@@ -8,7 +12,7 @@ kernel vec4 adjustPixelValue(sampler image, vec3 info)
     float yrange = floor(curCor.y - coord.y) == 0.0 ?  1.0 : 0.0;
     
     float inrange = (xrange + yrange) == 2.0 ? 1.0 : 0.0;
-
+    // 
     vec4 cur = sample(image, samplerCoord(image));
     cur.r = cur.r + inrange * (0.0 - (cur.r));
     cur.b = cur.b + inrange * (0.0 - (cur.b));

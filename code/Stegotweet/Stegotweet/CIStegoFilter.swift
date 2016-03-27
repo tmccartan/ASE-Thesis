@@ -10,6 +10,12 @@ import Foundation
 import CoreImage
 import UIKit
 
+public struct PixelData {
+    var a:UInt8 = 255
+    var r:UInt8
+    var g:UInt8
+    var b:UInt8
+}
 
 class CIStegoFilter : CIFilter {
     
@@ -29,9 +35,16 @@ class CIStegoFilter : CIFilter {
     }
     
     private func createKernel() -> CIKernel {
-        //let location = NSBundle.mainBundle().pathForResource("", ofType: nil)
-        let kernelString = try? NSString(contentsOfFile: "/web/ASE-Thesis/code/Stegotweet/Stegotweet/CIStegoFilter.cikernel", encoding: NSUTF8StringEncoding)
-        return CIKernel(string: kernelString as! String)!
+
+        var kernel : CIKernel? = nil;
+        do {
+            let kernelString = try String(contentsOfURL: NSBundle.mainBundle().URLForResource("CIStegoFilter", withExtension: "cikernel")!)
+            kernel = (CIKernel(string: kernelString))!
+            
+        } catch {
+            print(error)
+        }
+        return kernel!
     }
     
     private func roiFunction(index : Int32, rect:CGRect) -> CGRect {
@@ -39,7 +52,65 @@ class CIStegoFilter : CIFilter {
         return rect;
     }
     
-    func embedImage(image :CIImage, secretMessage: String) -> CIImage {
+    private let rgbColorSpace = CGColorSpaceCreateDeviceRGB();
+    private let bitmapInfo:CGBitmapInfo = CGBitmapInfo(rawValue: CGImageAlphaInfo.PremultipliedFirst.rawValue);
+    
+    private func imageFromARGB32Bitmap(pixels:[PixelData], width:Int, height:Int) -> CGImage {
+        let bitsPerComponent:Int = 8
+        let bitsPerPixel:Int = 32
+        
+        assert(pixels.count == Int(width * height))
+        
+        var data = pixels // Copy to mutable []
+        let providerRef = CGDataProviderCreateWithCFData(
+            NSData(bytes: &data, length: data.count * sizeof(PixelData))
+        )
+        
+        let cgim = CGImageCreate(
+            width,
+            height,
+            bitsPerComponent,
+            bitsPerPixel,
+            width * Int(sizeof(PixelData)),
+            rgbColorSpace,
+            bitmapInfo,
+            providerRef,
+            nil,
+            true,
+            .RenderingIntentDefault
+        )
+        return cgim!;
+    }
+    
+    func embedImage(inputImage :CIImage, secretMessage: String) -> CIImage {
+        
+        let pixelData = generateMessagePixelData(secretMessage);
+        let secretImage = imageFromARGB32Bitmap(pixelData, width: 200,height: 200);
+        let resultImage = performImageEmbedding(inputImage, secretImage: secretImage);
+        return resultImage;
+    }
+    
+    private func generateMessagePixelData(secretMessage: String) -> [PixelData] {
+        
+        //create byte array for secretMessage
+        //create seed for random dither
+        //
+        let buf = [UInt8](secretMessage.utf8);
+        var pixels = [PixelData]()
+        let seed: UInt8 = 1;
+        for byte in buf {
+            pixels.append(PixelData(a: 255, r: byte, g: seed, b: 0))
+        }
+        
+        return pixels;
+    }
+    private func performImageEmbedding(inputImage :CIImage, secretImage :CGImage) -> CIImage {
+        return inputImage;
+    }
+    func embedImage2(image :CIImage, secretMessage: String) -> CIImage {
+        
+        //this function will blend the messageImage values with the input image. 
+        
         
         // change message into byte array
         // break image into sections
@@ -80,4 +151,7 @@ class CIStegoFilter : CIFilter {
     func dechiperImage(image:CIImage) -> String {
         return "To Be Implemented"
     }
+    
 }
+
+
