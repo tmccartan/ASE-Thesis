@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CIStegoFilter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2jy-4G-bV1">
+                                <rect key="frame" x="6" y="0.0" width="588" height="518"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="518" id="52O-yC-nNE"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b6Z-0n-Cz4">
+                                <rect key="frame" x="20" y="526" width="124" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="124" id="VwM-tR-eKw"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="b6Z-0n-Cz4" firstAttribute="top" secondItem="2jy-4G-bV1" secondAttribute="bottom" constant="8" id="TZW-BE-Lls"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2jy-4G-bV1" secondAttribute="bottom" constant="82" id="WQK-Lc-u6O"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="b6Z-0n-Cz4" secondAttribute="bottom" constant="20" id="X3e-bF-gPA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2jy-4G-bV1" secondAttribute="trailing" constant="-14" id="cgk-WE-Rka"/>
+                            <constraint firstItem="2jy-4G-bV1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-14" id="dLH-Ep-KD0"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="b6Z-0n-Cz4" secondAttribute="leading" id="ktB-k6-B5v"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="432" y="429"/>
+        </scene>
+    </scenes>
+</document>

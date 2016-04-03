@@ -1,0 +1,10 @@
+kernel vec4 quantizer(__sample s, float delta, sampler dataSampler)
+{
+    vec4 data = sample(dataSampler, samplerCoord(dataSampler));
+    // blending the two images
+    s.r = (s.r + data.r) / 2.0;
+    s.g = (s.g + data.g) / 2.0;
+    s.b = (s.b + data.b) / 2.0;
+    // quantizing data
+    return vec4(modulo(s.r, delta),modulo(s.g, delta),modulo(s.b, delta),1);
+}
