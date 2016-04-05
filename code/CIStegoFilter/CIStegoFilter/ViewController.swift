@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    let secretmessage: String = "This is a secret message"
+    let secretMessage: String = "This is a secret message"
 
 
     override func viewDidLoad() {
@@ -24,9 +24,20 @@ class ViewController: UIViewController {
     }
     
     func embbedImage(inputImage :CIImage) {
+        let buf = [UInt8](secretMessage.utf8);
+        
+        // calcutate intensity i.3 R x G x B
+        // split by delta + dither?
+        // for each bit
+            // find if current bit is in delta + or -  using modulo
+            // if + ceiling it
+        
         
     }
     
+    func decipherImage(inputImage: CIImage, dither: Int){
+        
+    }
     private func createKernel() -> CIKernel {
         
         var kernel : CIKernel? = nil;

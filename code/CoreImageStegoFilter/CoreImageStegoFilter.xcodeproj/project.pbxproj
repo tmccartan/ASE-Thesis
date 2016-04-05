@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		70813C2F1CB3D6BF00BD58D0 /* jakeTwit.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 70813C2E1CB3D6BF00BD58D0 /* jakeTwit.jpg */; };
 		70D638001CB0246D00AFEF77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D637FF1CB0246D00AFEF77 /* AppDelegate.swift */; };
 		70D638021CB0246D00AFEF77 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D638011CB0246D00AFEF77 /* ViewController.swift */; };
 		70D638051CB0246D00AFEF77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70D638031CB0246D00AFEF77 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		70813C2E1CB3D6BF00BD58D0 /* jakeTwit.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jakeTwit.jpg; sourceTree = "<group>"; };
 		70D637FC1CB0246D00AFEF77 /* CoreImageStegoFilter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreImageStegoFilter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70D637FF1CB0246D00AFEF77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		70D638011CB0246D00AFEF77 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				70D638011CB0246D00AFEF77 /* ViewController.swift */,
 				70D638031CB0246D00AFEF77 /* Main.storyboard */,
 				70D638061CB0246D00AFEF77 /* Assets.xcassets */,
+				70813C2E1CB3D6BF00BD58D0 /* jakeTwit.jpg */,
 				70D638081CB0246D00AFEF77 /* LaunchScreen.storyboard */,
 				70D6380B1CB0246D00AFEF77 /* Info.plist */,
 			);
@@ -231,6 +234,7 @@
 			files = (
 				70D6380A1CB0246D00AFEF77 /* LaunchScreen.storyboard in Resources */,
 				70D638071CB0246D00AFEF77 /* Assets.xcassets in Resources */,
+				70813C2F1CB3D6BF00BD58D0 /* jakeTwit.jpg in Resources */,
 				70D638051CB0246D00AFEF77 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -484,6 +488,7 @@
 				70D638261CB0246E00AFEF77 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		70D638271CB0246E00AFEF77 /* Build configuration list for PBXNativeTarget "CoreImageStegoFilterTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +497,7 @@
 				70D638291CB0246E00AFEF77 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		70D6382A1CB0246E00AFEF77 /* Build configuration list for PBXNativeTarget "CoreImageStegoFilterUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +506,7 @@
 				70D6382C1CB0246E00AFEF77 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

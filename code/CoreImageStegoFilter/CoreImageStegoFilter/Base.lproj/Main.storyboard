@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,11 +17,31 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="jakeTwit" translatesAutoresizingMaskIntoConstraints="NO" id="jDD-Jx-Uax">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="504"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="504" id="PXF-dv-dHW"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jDD-Jx-Uax" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="5pA-75-doh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jDD-Jx-Uax" secondAttribute="trailing" constant="-20" id="Fa9-WE-Hey"/>
+                            <constraint firstItem="jDD-Jx-Uax" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="xUY-nW-43o"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="jDD-Jx-Uax" id="tGP-iP-kOh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="305" y="429"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="jakeTwit" width="450" height="600"/>
+    </resources>
 </document>
