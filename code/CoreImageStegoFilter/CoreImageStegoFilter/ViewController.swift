@@ -43,8 +43,8 @@ class ViewController: UIViewController {
         let height = Int(image.size.height)
         let width  = Int(image.size.width)
         
-        let maxNumber = 10
-        let minNumber = 1
+        let maxNumber = 1
+        let minNumber = 0
         let delta:UInt8 = 15
         let smallDelta:UInt8 = 1
         var x = 0;
@@ -68,33 +68,27 @@ class ViewController: UIViewController {
         
         // need to embed byte
         for byte in buf {
-            // use dither to move byte
-            // find whether in + or minus range
-            // move to nearest delta if +, away if -
-            
-            let dither = rand() % (maxNumber + 1 - minNumber) + minNumber
-            //offset the byte with the dither - equivilent to moving the range
-            let dithByte = byte + UInt8(dither)
-            
-            let region = Int(floor(Double(dithByte / delta)) % 2)
-            
-            let index = y * width + x
-            
-            changePixelValue(rgba, index: index, sign: region, delta: smallDelta);
-            
-            if( (x + 1) != width) {
-                x += 1
-            }
-            else {
-                x = 0;
-                if(y + 1 == height){
-                    //Out of space throw exception
-                    break;
+            let strBits = String(UInt(byte), radix: 2);
+            let bits = strBits.characters.map { Int(String($0)) }
+            for bit in bits {
+                let dither = rand() % (maxNumber + 1 - minNumber) + minNumber
+                let index = y * width + x
+                
+                changePixelValue(rgba, index: index, sign: bit!, delta: smallDelta);
+                
+                if( (x + 1) != width) {
+                    x += 1
                 }
-                y += 1
+                else {
+                    x = 0;
+                    if(y + 1 == height){
+                        //Out of space throw exception
+                        break;
+                    }
+                    y += 1
+                }
+
             }
-            
-           
         }
         
         return rgba.toUIImage()!
@@ -117,9 +111,12 @@ class ViewController: UIViewController {
         rgba.pixels[index] = pixel
     }
     func decipherImage(){
-        // check image for text - fail if not
-        // get size by getting two bits  =let num = UInt16(b1) << 8 | UInt16(b2)
-        // get all bits by reconstructing the passed in dither with the deltas
+        // read all pixels into array
+        // foreach pixel
+        // the value is either 1 or zero for the bit
+        //
+        
+        
     }
 
     func pad(string : String, toSize: Int) -> String {
@@ -128,6 +125,10 @@ class ViewController: UIViewController {
             padded = "0" + padded
         }
         return padded
+    }
+    func noOp (){
+        
+        
     }
 
 }
@@ -151,6 +152,7 @@ struct Pixel {
         set { value = (UInt32(newValue) << 24) | (value & 0x00FFFFFF) }
     }
 }
+
 
 struct RGBA {
     var pixels: UnsafeMutableBufferPointer<Pixel>
