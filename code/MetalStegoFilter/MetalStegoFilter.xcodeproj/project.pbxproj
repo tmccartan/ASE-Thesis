@@ -14,7 +14,8 @@
 		7096D4131CB91CC0003ACD60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7096D4111CB91CC0003ACD60 /* LaunchScreen.storyboard */; };
 		7096D41E1CB91CC0003ACD60 /* MetalStegoFilterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7096D41D1CB91CC0003ACD60 /* MetalStegoFilterTests.swift */; };
 		7096D4291CB91CC0003ACD60 /* MetalStegoFilterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7096D4281CB91CC0003ACD60 /* MetalStegoFilterUITests.swift */; };
-		7096D4381CB91D85003ACD60 /* StegoFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 7096D4371CB91D85003ACD60 /* StegoFilter.metal */; };
+		7096D43A1CB927CC003ACD60 /* MetalTexture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7096D4391CB927CC003ACD60 /* MetalTexture.swift */; };
+		7096D43B1CB940AC003ACD60 /* StegoFilter.metal in Resources */ = {isa = PBXBuildFile; fileRef = 7096D4371CB91D85003ACD60 /* StegoFilter.metal */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		7096D4281CB91CC0003ACD60 /* MetalStegoFilterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalStegoFilterUITests.swift; sourceTree = "<group>"; };
 		7096D42A1CB91CC0003ACD60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7096D4371CB91D85003ACD60 /* StegoFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = StegoFilter.metal; sourceTree = "<group>"; };
+		7096D4391CB927CC003ACD60 /* MetalTexture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalTexture.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				7096D4361CB91D75003ACD60 /* Shaders */,
 				7096D4081CB91CC0003ACD60 /* AppDelegate.swift */,
 				7096D40A1CB91CC0003ACD60 /* ViewController.swift */,
+				7096D4391CB927CC003ACD60 /* MetalTexture.swift */,
 				7096D40C1CB91CC0003ACD60 /* Main.storyboard */,
 				7096D40F1CB91CC0003ACD60 /* Assets.xcassets */,
 				7096D4111CB91CC0003ACD60 /* LaunchScreen.storyboard */,
@@ -240,6 +243,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7096D43B1CB940AC003ACD60 /* StegoFilter.metal in Resources */,
 				7096D4131CB91CC0003ACD60 /* LaunchScreen.storyboard in Resources */,
 				7096D4101CB91CC0003ACD60 /* Assets.xcassets in Resources */,
 				7096D40E1CB91CC0003ACD60 /* Main.storyboard in Resources */,
@@ -267,7 +271,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7096D4381CB91D85003ACD60 /* StegoFilter.metal in Sources */,
+				7096D43A1CB927CC003ACD60 /* MetalTexture.swift in Sources */,
 				7096D40B1CB91CC0003ACD60 /* ViewController.swift in Sources */,
 				7096D4091CB91CC0003ACD60 /* AppDelegate.swift in Sources */,
 			);

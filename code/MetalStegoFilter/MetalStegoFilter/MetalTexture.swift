@@ -6,7 +6,10 @@
 //  Copyright (c) 2014 Andrew K. All rights reserved.
 //
 
+//Borrowed from https://www.raywenderlich.com/93997/ios-8-metal-tutorial-swift-part-3-adding-texture
+
 import UIKit
+import Metal
 
 class MetalTexture: NSObject {
 
