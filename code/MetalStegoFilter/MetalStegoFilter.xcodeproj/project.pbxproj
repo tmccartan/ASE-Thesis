@@ -1,0 +1,517 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7096D4091CB91CC0003ACD60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7096D4081CB91CC0003ACD60 /* AppDelegate.swift */; };
+		7096D40B1CB91CC0003ACD60 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7096D40A1CB91CC0003ACD60 /* ViewController.swift */; };
+		7096D40E1CB91CC0003ACD60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7096D40C1CB91CC0003ACD60 /* Main.storyboard */; };
+		7096D4101CB91CC0003ACD60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7096D40F1CB91CC0003ACD60 /* Assets.xcassets */; };
+		7096D4131CB91CC0003ACD60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7096D4111CB91CC0003ACD60 /* LaunchScreen.storyboard */; };
+		7096D41E1CB91CC0003ACD60 /* MetalStegoFilterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7096D41D1CB91CC0003ACD60 /* MetalStegoFilterTests.swift */; };
+		7096D4291CB91CC0003ACD60 /* MetalStegoFilterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7096D4281CB91CC0003ACD60 /* MetalStegoFilterUITests.swift */; };
+		7096D4381CB91D85003ACD60 /* StegoFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 7096D4371CB91D85003ACD60 /* StegoFilter.metal */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7096D41A1CB91CC0003ACD60 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7096D3FD1CB91CC0003ACD60 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7096D4041CB91CC0003ACD60;
+			remoteInfo = MetalStegoFilter;
+		};
+		7096D4251CB91CC0003ACD60 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7096D3FD1CB91CC0003ACD60 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7096D4041CB91CC0003ACD60;
+			remoteInfo = MetalStegoFilter;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7096D4051CB91CC0003ACD60 /* MetalStegoFilter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MetalStegoFilter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7096D4081CB91CC0003ACD60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7096D40A1CB91CC0003ACD60 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7096D40D1CB91CC0003ACD60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7096D40F1CB91CC0003ACD60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7096D4121CB91CC0003ACD60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7096D4141CB91CC0003ACD60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7096D4191CB91CC0003ACD60 /* MetalStegoFilterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MetalStegoFilterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7096D41D1CB91CC0003ACD60 /* MetalStegoFilterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalStegoFilterTests.swift; sourceTree = "<group>"; };
+		7096D41F1CB91CC0003ACD60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7096D4241CB91CC0003ACD60 /* MetalStegoFilterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MetalStegoFilterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7096D4281CB91CC0003ACD60 /* MetalStegoFilterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalStegoFilterUITests.swift; sourceTree = "<group>"; };
+		7096D42A1CB91CC0003ACD60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7096D4371CB91D85003ACD60 /* StegoFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = StegoFilter.metal; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7096D4021CB91CC0003ACD60 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7096D4161CB91CC0003ACD60 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7096D4211CB91CC0003ACD60 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7096D3FC1CB91CC0003ACD60 = {
+			isa = PBXGroup;
+			children = (
+				7096D4071CB91CC0003ACD60 /* MetalStegoFilter */,
+				7096D41C1CB91CC0003ACD60 /* MetalStegoFilterTests */,
+				7096D4271CB91CC0003ACD60 /* MetalStegoFilterUITests */,
+				7096D4061CB91CC0003ACD60 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7096D4061CB91CC0003ACD60 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7096D4051CB91CC0003ACD60 /* MetalStegoFilter.app */,
+				7096D4191CB91CC0003ACD60 /* MetalStegoFilterTests.xctest */,
+				7096D4241CB91CC0003ACD60 /* MetalStegoFilterUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7096D4071CB91CC0003ACD60 /* MetalStegoFilter */ = {
+			isa = PBXGroup;
+			children = (
+				7096D4361CB91D75003ACD60 /* Shaders */,
+				7096D4081CB91CC0003ACD60 /* AppDelegate.swift */,
+				7096D40A1CB91CC0003ACD60 /* ViewController.swift */,
+				7096D40C1CB91CC0003ACD60 /* Main.storyboard */,
+				7096D40F1CB91CC0003ACD60 /* Assets.xcassets */,
+				7096D4111CB91CC0003ACD60 /* LaunchScreen.storyboard */,
+				7096D4141CB91CC0003ACD60 /* Info.plist */,
+			);
+			path = MetalStegoFilter;
+			sourceTree = "<group>";
+		};
+		7096D41C1CB91CC0003ACD60 /* MetalStegoFilterTests */ = {
+			isa = PBXGroup;
+			children = (
+				7096D41D1CB91CC0003ACD60 /* MetalStegoFilterTests.swift */,
+				7096D41F1CB91CC0003ACD60 /* Info.plist */,
+			);
+			path = MetalStegoFilterTests;
+			sourceTree = "<group>";
+		};
+		7096D4271CB91CC0003ACD60 /* MetalStegoFilterUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7096D4281CB91CC0003ACD60 /* MetalStegoFilterUITests.swift */,
+				7096D42A1CB91CC0003ACD60 /* Info.plist */,
+			);
+			path = MetalStegoFilterUITests;
+			sourceTree = "<group>";
+		};
+		7096D4361CB91D75003ACD60 /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				7096D4371CB91D85003ACD60 /* StegoFilter.metal */,
+			);
+			name = Shaders;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7096D4041CB91CC0003ACD60 /* MetalStegoFilter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7096D42D1CB91CC0003ACD60 /* Build configuration list for PBXNativeTarget "MetalStegoFilter" */;
+			buildPhases = (
+				7096D4011CB91CC0003ACD60 /* Sources */,
+				7096D4021CB91CC0003ACD60 /* Frameworks */,
+				7096D4031CB91CC0003ACD60 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MetalStegoFilter;
+			productName = MetalStegoFilter;
+			productReference = 7096D4051CB91CC0003ACD60 /* MetalStegoFilter.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7096D4181CB91CC0003ACD60 /* MetalStegoFilterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7096D4301CB91CC0003ACD60 /* Build configuration list for PBXNativeTarget "MetalStegoFilterTests" */;
+			buildPhases = (
+				7096D4151CB91CC0003ACD60 /* Sources */,
+				7096D4161CB91CC0003ACD60 /* Frameworks */,
+				7096D4171CB91CC0003ACD60 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7096D41B1CB91CC0003ACD60 /* PBXTargetDependency */,
+			);
+			name = MetalStegoFilterTests;
+			productName = MetalStegoFilterTests;
+			productReference = 7096D4191CB91CC0003ACD60 /* MetalStegoFilterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7096D4231CB91CC0003ACD60 /* MetalStegoFilterUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7096D4331CB91CC0003ACD60 /* Build configuration list for PBXNativeTarget "MetalStegoFilterUITests" */;
+			buildPhases = (
+				7096D4201CB91CC0003ACD60 /* Sources */,
+				7096D4211CB91CC0003ACD60 /* Frameworks */,
+				7096D4221CB91CC0003ACD60 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7096D4261CB91CC0003ACD60 /* PBXTargetDependency */,
+			);
+			name = MetalStegoFilterUITests;
+			productName = MetalStegoFilterUITests;
+			productReference = 7096D4241CB91CC0003ACD60 /* MetalStegoFilterUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7096D3FD1CB91CC0003ACD60 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Terry McCartan";
+				TargetAttributes = {
+					7096D4041CB91CC0003ACD60 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					7096D4181CB91CC0003ACD60 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 7096D4041CB91CC0003ACD60;
+					};
+					7096D4231CB91CC0003ACD60 = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 7096D4041CB91CC0003ACD60;
+					};
+				};
+			};
+			buildConfigurationList = 7096D4001CB91CC0003ACD60 /* Build configuration list for PBXProject "MetalStegoFilter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7096D3FC1CB91CC0003ACD60;
+			productRefGroup = 7096D4061CB91CC0003ACD60 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7096D4041CB91CC0003ACD60 /* MetalStegoFilter */,
+				7096D4181CB91CC0003ACD60 /* MetalStegoFilterTests */,
+				7096D4231CB91CC0003ACD60 /* MetalStegoFilterUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7096D4031CB91CC0003ACD60 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7096D4131CB91CC0003ACD60 /* LaunchScreen.storyboard in Resources */,
+				7096D4101CB91CC0003ACD60 /* Assets.xcassets in Resources */,
+				7096D40E1CB91CC0003ACD60 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7096D4171CB91CC0003ACD60 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7096D4221CB91CC0003ACD60 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7096D4011CB91CC0003ACD60 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7096D4381CB91D85003ACD60 /* StegoFilter.metal in Sources */,
+				7096D40B1CB91CC0003ACD60 /* ViewController.swift in Sources */,
+				7096D4091CB91CC0003ACD60 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7096D4151CB91CC0003ACD60 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7096D41E1CB91CC0003ACD60 /* MetalStegoFilterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7096D4201CB91CC0003ACD60 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7096D4291CB91CC0003ACD60 /* MetalStegoFilterUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7096D41B1CB91CC0003ACD60 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7096D4041CB91CC0003ACD60 /* MetalStegoFilter */;
+			targetProxy = 7096D41A1CB91CC0003ACD60 /* PBXContainerItemProxy */;
+		};
+		7096D4261CB91CC0003ACD60 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7096D4041CB91CC0003ACD60 /* MetalStegoFilter */;
+			targetProxy = 7096D4251CB91CC0003ACD60 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7096D40C1CB91CC0003ACD60 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7096D40D1CB91CC0003ACD60 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7096D4111CB91CC0003ACD60 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7096D4121CB91CC0003ACD60 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7096D42B1CB91CC0003ACD60 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7096D42C1CB91CC0003ACD60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7096D42E1CB91CC0003ACD60 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MetalStegoFilter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ucd.MetalStegoFilter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		7096D42F1CB91CC0003ACD60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MetalStegoFilter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ucd.MetalStegoFilter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		7096D4311CB91CC0003ACD60 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MetalStegoFilterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ucd.MetalStegoFilterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MetalStegoFilter.app/MetalStegoFilter";
+			};
+			name = Debug;
+		};
+		7096D4321CB91CC0003ACD60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MetalStegoFilterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ucd.MetalStegoFilterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MetalStegoFilter.app/MetalStegoFilter";
+			};
+			name = Release;
+		};
+		7096D4341CB91CC0003ACD60 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MetalStegoFilterUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ucd.MetalStegoFilterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MetalStegoFilter;
+			};
+			name = Debug;
+		};
+		7096D4351CB91CC0003ACD60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MetalStegoFilterUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ucd.MetalStegoFilterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MetalStegoFilter;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7096D4001CB91CC0003ACD60 /* Build configuration list for PBXProject "MetalStegoFilter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7096D42B1CB91CC0003ACD60 /* Debug */,
+				7096D42C1CB91CC0003ACD60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7096D42D1CB91CC0003ACD60 /* Build configuration list for PBXNativeTarget "MetalStegoFilter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7096D42E1CB91CC0003ACD60 /* Debug */,
+				7096D42F1CB91CC0003ACD60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		7096D4301CB91CC0003ACD60 /* Build configuration list for PBXNativeTarget "MetalStegoFilterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7096D4311CB91CC0003ACD60 /* Debug */,
+				7096D4321CB91CC0003ACD60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		7096D4331CB91CC0003ACD60 /* Build configuration list for PBXNativeTarget "MetalStegoFilterUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7096D4341CB91CC0003ACD60 /* Debug */,
+				7096D4351CB91CC0003ACD60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7096D3FD1CB91CC0003ACD60 /* Project object */;
+}

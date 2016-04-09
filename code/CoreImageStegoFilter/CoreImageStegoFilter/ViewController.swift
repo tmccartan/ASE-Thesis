@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         imageView.image = UIImage(CIImage: image!)
-        imageView.image = embedImage()
+        imageView.image = embedImage(1)
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,58 +33,64 @@ class ViewController: UIViewController {
         
     }
     
-    func embedImage() -> UIImage{
+    func embedImage(seed :Int) -> UIImage{
         
         let image = UIImage(named: "jakeTwit")!
+        
         let rgba = RGBA(image: image)!
         
         
         let height = Int(image.size.height)
         let width  = Int(image.size.width)
-        let seed: UInt32 = 1;
+        
         let maxNumber = 10
         let minNumber = 1
-        let delta = 15
+        let delta:UInt8 = 15
+        let smallDelta:UInt8 = 1
         var x = 0;
         var y = 0;
         
-        srand(seed);
-        let buf = [UInt8](secretMessage.utf8);
+        srand(UInt32(seed));
+        // need to embed the identifer that will speed up image checking
+        // the length of text to extract
+        // the message itself
+        let capactyByte1 = UInt16(secretMessage.characters.count)
+        let b1 = UInt8(capactyByte1 >> 8)
+        let b2 = UInt8(capactyByte1 & 0x00ff)
+        
+        let num = UInt16(b1) << 8 | UInt16(b2)
+        let identifierString = "StegoTweet"
+        
+        var buf = [UInt8](identifierString.utf8);
+        buf.append(b1)
+        buf.append(b2)
+        buf.appendContentsOf(secretMessage.utf8)
+        
+        // need to embed byte
         for byte in buf {
             // use dither to move byte
             // find whether in + or minus range
             // move to nearest delta if +, away if -
             
             let dither = rand() % (maxNumber + 1 - minNumber) + minNumber
+            //offset the byte with the dither - equivilent to moving the range
             let dithByte = byte + UInt8(dither)
-            let region = dithByte % 15
+            
+            let region = Int(floor(Double(dithByte / delta)) % 2)
             
             let index = y * width + x
-            var pixel = rgba.pixels[index]
             
-            if(region == 1){
-                //postive quantizer
-                pixel.red += 1
-                pixel.green += 1
-                pixel.blue += 1
-                //pixel.alpha += 1
-            }
-            else {
-                //negative quantizer
-                pixel.red -= 1
-                pixel.green -= 1
-                pixel.blue -= 1
-                //pixel.alpha -= 1
-            }
-            
-            
-            rgba.pixels[index] = pixel
+            changePixelValue(rgba, index: index, sign: region, delta: smallDelta);
             
             if( (x + 1) != width) {
                 x += 1
             }
             else {
                 x = 0;
+                if(y + 1 == height){
+                    //Out of space throw exception
+                    break;
+                }
                 y += 1
             }
             
@@ -93,7 +99,29 @@ class ViewController: UIViewController {
         
         return rgba.toUIImage()!
     }
-    
+    func changePixelValue(rgba: RGBA, index: Int, sign: Int, delta:UInt8) {
+        var pixel = rgba.pixels[index]
+        
+        if(sign == 0){
+            //postive quantizer
+            pixel.red = pixel.red == 255 ? 255 : pixel.red + delta
+            pixel.green = pixel.green == 255 ? 255 : pixel.red + delta
+            pixel.blue = pixel.blue == 255 ? 255 : pixel.red + delta
+        }
+        else {
+            //negative quantizer
+            pixel.red = pixel.red == 0 ? 0 : pixel.red - delta
+            pixel.green = pixel.green == 0 ? 0 : pixel.red - delta
+            pixel.blue = pixel.blue == 0 ? 0 : pixel.red - delta
+        }
+        rgba.pixels[index] = pixel
+    }
+    func decipherImage(){
+        // check image for text - fail if not
+        // get size by getting two bits  =let num = UInt16(b1) << 8 | UInt16(b2)
+        // get all bits by reconstructing the passed in dither with the deltas
+    }
+
     func pad(string : String, toSize: Int) -> String {
         var padded = string
         for _ in 0..<toSize - string.characters.count {
