@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "DCFDCDA86A637A1E0F0D83B019F4015EF0009E4D",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "2C28B1DD5070055B39E4A084A7F19A1D2285B789" : 0,
+    "DCFDCDA86A637A1E0F0D83B019F4015EF0009E4D" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "994E3AAE-7D44-4905-B87D-CB4BF54B8707",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "2C28B1DD5070055B39E4A084A7F19A1D2285B789" : "ASE-Thesis\/code\/Stegotweet\/Heimdall\/",
+    "DCFDCDA86A637A1E0F0D83B019F4015EF0009E4D" : "ASE-Thesis\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Stegotweet",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "code\/Stegotweet\/Stegotweet.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:henrinormak\/Heimdall.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2C28B1DD5070055B39E4A084A7F19A1D2285B789"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:tmccartan\/ASE-Thesis.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "DCFDCDA86A637A1E0F0D83B019F4015EF0009E4D"
+    }
+  ]
+}

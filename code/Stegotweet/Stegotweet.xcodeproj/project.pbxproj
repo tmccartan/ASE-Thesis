@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7000C0FD1C61461500506329 /* CIStegoFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7000C0FC1C61461500506329 /* CIStegoFilter.m */; };
 		7004B9351C44154500583D09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7004B9341C44154500583D09 /* AppDelegate.swift */; };
 		7004B93A1C44154500583D09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7004B9381C44154500583D09 /* Main.storyboard */; };
 		7004B93D1C44154500583D09 /* Stegotweet.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7004B93B1C44154500583D09 /* Stegotweet.xcdatamodeld */; };
@@ -19,6 +18,7 @@
 		70271FCF1C7B74840079DD9B /* CIStegoFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70271FCE1C7B74840079DD9B /* CIStegoFilter.swift */; };
 		70271FD11C7BA9970079DD9B /* image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 70271FD01C7BA9970079DD9B /* image.jpg */; };
 		7096D43D1CB98D25003ACD60 /* EmojiConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7096D43C1CB98D25003ACD60 /* EmojiConverter.swift */; };
+		7096D43F1CB99620003ACD60 /* PublicKeyHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7096D43E1CB99620003ACD60 /* PublicKeyHelper.swift */; };
 		7098306A1C6A2EA0006E37CD /* TwitterAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 709830691C6A2EA0006E37CD /* TwitterAPI.swift */; };
 		7098306D1C6A31A3006E37CD /* Conversation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7098306C1C6A31A3006E37CD /* Conversation.swift */; };
 		7098306F1C6A32A5006E37CD /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7098306E1C6A32A5006E37CD /* Line.swift */; };
@@ -47,12 +47,44 @@
 			remoteGlobalIDString = 7004B9301C44154500583D09;
 			remoteInfo = Stegotweet;
 		};
+		7096D4471CBA7A18003ACD60 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7096D4401CBA7A18003ACD60 /* Heimdall.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8E866C541AE8FBEC005682A2;
+			remoteInfo = Heimdall;
+		};
+		7096D4491CBA7A18003ACD60 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7096D4401CBA7A18003ACD60 /* Heimdall.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 59B0020E1BE2D1410020EF3D;
+			remoteInfo = "Heimdall-TVOS";
+		};
+		7096D44B1CBA7A18003ACD60 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7096D4401CBA7A18003ACD60 /* Heimdall.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8E866C5F1AE8FBEC005682A2;
+			remoteInfo = HeimdallTests;
+		};
+		7096D44D1CBA7A18003ACD60 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7096D4401CBA7A18003ACD60 /* Heimdall.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8E38307A1AFE176A007E4235;
+			remoteInfo = CommonCrypto;
+		};
+		7096D4501CBA7A73003ACD60 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7096D4401CBA7A18003ACD60 /* Heimdall.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 8E866C531AE8FBEC005682A2;
+			remoteInfo = Heimdall;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		7000C0F71C6142D900506329 /* CIStegoFilter.cikernel */ = {isa = PBXFileReference; explicitFileType = sourcecode.glsl; fileEncoding = 4; path = CIStegoFilter.cikernel; sourceTree = "<group>"; };
-		7000C0F91C61453600506329 /* CIStegoFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CIStegoFilter.h; sourceTree = "<group>"; };
-		7000C0FC1C61461500506329 /* CIStegoFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CIStegoFilter.m; sourceTree = "<group>"; };
 		7004B9311C44154500583D09 /* Stegotweet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stegotweet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7004B9341C44154500583D09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7004B9391C44154500583D09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -67,10 +99,11 @@
 		7004B9571C44154500583D09 /* StegotweetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StegotweetUITests.swift; sourceTree = "<group>"; };
 		7004B9591C44154500583D09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70271FC71C73662B0079DD9B /* MentionTVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MentionTVCell.swift; sourceTree = "<group>"; };
-		70271FCD1C7495BB0079DD9B /* Stegotweet-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Stegotweet-Bridging-Header.h"; sourceTree = "<group>"; };
 		70271FCE1C7B74840079DD9B /* CIStegoFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CIStegoFilter.swift; sourceTree = "<group>"; };
 		70271FD01C7BA9970079DD9B /* image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image.jpg; sourceTree = "<group>"; };
 		7096D43C1CB98D25003ACD60 /* EmojiConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmojiConverter.swift; sourceTree = "<group>"; };
+		7096D43E1CB99620003ACD60 /* PublicKeyHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicKeyHelper.swift; sourceTree = "<group>"; };
+		7096D4401CBA7A18003ACD60 /* Heimdall.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Heimdall.xcodeproj; path = Heimdall/Heimdall.xcodeproj; sourceTree = "<group>"; };
 		709830691C6A2EA0006E37CD /* TwitterAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterAPI.swift; sourceTree = "<group>"; };
 		7098306C1C6A31A3006E37CD /* Conversation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
 		7098306E1C6A32A5006E37CD /* Line.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
@@ -112,6 +145,7 @@
 		7004B9281C44154500583D09 = {
 			isa = PBXGroup;
 			children = (
+				7096D4401CBA7A18003ACD60 /* Heimdall.xcodeproj */,
 				7004B9331C44154500583D09 /* Stegotweet */,
 				7004B94B1C44154500583D09 /* StegotweetTests */,
 				7004B9561C44154500583D09 /* StegotweetUITests */,
@@ -143,7 +177,6 @@
 				7004B9401C44154500583D09 /* LaunchScreen.storyboard */,
 				7004B9431C44154500583D09 /* Info.plist */,
 				7004B93B1C44154500583D09 /* Stegotweet.xcdatamodeld */,
-				70271FCD1C7495BB0079DD9B /* Stegotweet-Bridging-Header.h */,
 			);
 			path = Stegotweet;
 			sourceTree = "<group>";
@@ -166,11 +199,23 @@
 			path = StegotweetUITests;
 			sourceTree = "<group>";
 		};
+		7096D4411CBA7A18003ACD60 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7096D4481CBA7A18003ACD60 /* Heimdall.framework */,
+				7096D44A1CBA7A18003ACD60 /* Heimdall.framework */,
+				7096D44C1CBA7A18003ACD60 /* HeimdallTests.xctest */,
+				7096D44E1CBA7A18003ACD60 /* CommonCrypto.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		709830681C6A2E7D006E37CD /* Twitter */ = {
 			isa = PBXGroup;
 			children = (
 				709830691C6A2EA0006E37CD /* TwitterAPI.swift */,
 				7096D43C1CB98D25003ACD60 /* EmojiConverter.swift */,
+				7096D43E1CB99620003ACD60 /* PublicKeyHelper.swift */,
 			);
 			name = Twitter;
 			sourceTree = "<group>";
@@ -203,9 +248,6 @@
 		70BC85561C63CBEC00018AFA /* CIFilters */ = {
 			isa = PBXGroup;
 			children = (
-				7000C0F71C6142D900506329 /* CIStegoFilter.cikernel */,
-				7000C0F91C61453600506329 /* CIStegoFilter.h */,
-				7000C0FC1C61461500506329 /* CIStegoFilter.m */,
 				70271FCE1C7B74840079DD9B /* CIStegoFilter.swift */,
 			);
 			name = CIFilters;
@@ -225,6 +267,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				7096D4511CBA7A73003ACD60 /* PBXTargetDependency */,
 			);
 			name = Stegotweet;
 			productName = Stegotweet;
@@ -301,6 +344,12 @@
 			mainGroup = 7004B9281C44154500583D09;
 			productRefGroup = 7004B9321C44154500583D09 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 7096D4411CBA7A18003ACD60 /* Products */;
+					ProjectRef = 7096D4401CBA7A18003ACD60 /* Heimdall.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				7004B9301C44154500583D09 /* Stegotweet */,
@@ -309,6 +358,37 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		7096D4481CBA7A18003ACD60 /* Heimdall.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Heimdall.framework;
+			remoteRef = 7096D4471CBA7A18003ACD60 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7096D44A1CBA7A18003ACD60 /* Heimdall.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Heimdall.framework;
+			remoteRef = 7096D4491CBA7A18003ACD60 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7096D44C1CBA7A18003ACD60 /* HeimdallTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = HeimdallTests.xctest;
+			remoteRef = 7096D44B1CBA7A18003ACD60 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7096D44E1CBA7A18003ACD60 /* CommonCrypto.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = CommonCrypto.framework;
+			remoteRef = 7096D44D1CBA7A18003ACD60 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		7004B92F1C44154500583D09 /* Resources */ = {
@@ -354,10 +434,10 @@
 				7004B9351C44154500583D09 /* AppDelegate.swift in Sources */,
 				70BC855E1C63CF8000018AFA /* ImageEmbedderVC.swift in Sources */,
 				709830741C6A69FF006E37CD /* TweetTVCell.swift in Sources */,
-				7000C0FD1C61461500506329 /* CIStegoFilter.m in Sources */,
 				70BC855A1C63CF5900018AFA /* MentionsTVC.swift in Sources */,
 				7098306F1C6A32A5006E37CD /* Line.swift in Sources */,
 				709830761C6C7FE5006E37CD /* NewTweetVC.swift in Sources */,
+				7096D43F1CB99620003ACD60 /* PublicKeyHelper.swift in Sources */,
 				7098306A1C6A2EA0006E37CD /* TwitterAPI.swift in Sources */,
 				7004B93D1C44154500583D09 /* Stegotweet.xcdatamodeld in Sources */,
 			);
@@ -391,6 +471,11 @@
 			isa = PBXTargetDependency;
 			target = 7004B9301C44154500583D09 /* Stegotweet */;
 			targetProxy = 7004B9541C44154500583D09 /* PBXContainerItemProxy */;
+		};
+		7096D4511CBA7A73003ACD60 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Heimdall;
+			targetProxy = 7096D4501CBA7A73003ACD60 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -506,7 +591,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ucd.Stegotweet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/web/ASE-Thesis/code/Stegotweet/Stegotweet/Stegotweet-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -520,7 +604,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ucd.Stegotweet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "/web/ASE-Thesis/code/Stegotweet/Stegotweet/Stegotweet-Bridging-Header.h";
 			};
 			name = Release;
 		};
