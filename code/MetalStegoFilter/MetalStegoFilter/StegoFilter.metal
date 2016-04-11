@@ -26,6 +26,9 @@ kernel void stego_embded_image( texture2d<half, access::sample> source_texture [
    // float4 inColor = source_texture.read(gid).rgba;
   //  inColor.r = 0;
   //  dest_texture.write(inColor, gid);
+    const half4 colorAtPixel = source_texture.read(gid);
+    
+    return dest_texture.write(colorAtPixel, gid);
 }
 
 kernel void stego_decipher_image(texture2d<half, access::sample> sourceTexture [[texture(0)]],

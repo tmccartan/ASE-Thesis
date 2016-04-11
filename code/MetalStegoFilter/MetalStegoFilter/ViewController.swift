@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     let secretMessage: String = "This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message, "
     let image = CIImage(image: UIImage(named: "jakeTwit")!)
     let seed = 10
+    var destImageTexture = MetalTexture(resourceName: "jakeTwit", ext: ".jpg", mipmaped: false);
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +41,7 @@ class ViewController: UIViewController {
                 
         //source image texture container
         let sourceImageTexture = MetalTexture(resourceName: "jakeTwit", ext: ".jpg", mipmaped: false)
-        let destImageTexture = MetalTexture(resourceName: "jakeTwit", ext: ".jpg", mipmaped: false)
+       // destImageTexture = MetalTexture(resourceName: "jakeTwit", ext: ".jpg", mipmaped: false)
         
      
         
@@ -76,11 +77,10 @@ class ViewController: UIViewController {
         
 
         commandEncoder.endEncoding()
+       
         commandBuffer.commit();
-        
+        commandBuffer.waitUntilCompleted()
         imageview.image = destImageTexture.image()
-        
-        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
