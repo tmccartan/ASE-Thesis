@@ -20,35 +20,36 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // (1) - Get Reference to the device
         let device: MTLDevice = MTLCreateSystemDefaultDevice()!
         // Create a default library
         let defaultLibrary: MTLLibrary = device.newDefaultLibrary()!
         
-        // Create a command queue
-        let commandQueue: MTLCommandQueue = device.newCommandQueue()
-        // reference to the function
+        // (2) reference to the function and create the pipeline state
         let kernelFunction: MTLFunction = defaultLibrary.newFunctionWithName("stego_embded_image")!
-        //source image texture container
-        let sourceImageTexture = MetalTexture(resourceName: "jakeTwit", ext: ".jpg", mipmaped: false)
-        let destImageTexture = MetalTexture(resourceName: "jakeTwit", ext: ".jpg", mipmaped: false)
-        // Define the pipeline state
         let pipelineState: MTLComputePipelineState =
             try! device.newComputePipelineStateWithFunction(kernelFunction)
         
-        // Define the command buffer
+        // (3) Create a command queue, a command buffer that will pass information to the shader
+        let commandQueue: MTLCommandQueue = device.newCommandQueue()
         let commandBuffer: MTLCommandBuffer = commandQueue.commandBuffer()
         
         //Define the command encoder
         let commandEncoder: MTLComputeCommandEncoder = commandBuffer.computeCommandEncoder()
         commandEncoder.setComputePipelineState(pipelineState)
+                
+        //source image texture container
+        let sourceImageTexture = MetalTexture(resourceName: "jakeTwit", ext: ".jpg", mipmaped: false)
+        let destImageTexture = MetalTexture(resourceName: "jakeTwit", ext: ".jpg", mipmaped: false)
+        
      
         
         // Create a command queue
         let imageLoadCommandQueue: MTLCommandQueue = device.newCommandQueue()
         //load the source image texture
         
-        sourceImageTexture.loadTexture(device: device, commandQ: imageLoadCommandQueue, flip: false)
-        destImageTexture.loadTexture(device: device, commandQ: imageLoadCommandQueue, flip: false)
+        sourceImageTexture.loadTexture(device: device, commandQ: imageLoadCommandQueue, flip: true)
+        destImageTexture.loadTexture(device: device, commandQ: imageLoadCommandQueue, flip: true)
         
         let height = sourceImageTexture.texture.height
         let width = sourceImageTexture.texture.width
@@ -75,7 +76,6 @@ class ViewController: UIViewController {
         
 
         commandEncoder.endEncoding()
-        
         commandBuffer.commit();
         
         imageview.image = destImageTexture.image()

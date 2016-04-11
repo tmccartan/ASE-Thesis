@@ -71,7 +71,17 @@ class ViewController: UIViewController {
             let strBits = String(UInt(byte), radix: 2);
             let bits = strBits.characters.map { Int(String($0)) }
             for bit in bits {
+                // 255 -dither
+                // break into ranges of - for 0 bit  and + for 1
+                // if bit is 0 move it towards the center of the nearest negative interval
+                // if bit is 1 move the pixel toward the center of the nearest postive interval 
+                
+           
                 let dither = rand() % (maxNumber + 1 - minNumber) + minNumber
+                let offsetRange = 255 - dither
+                // break offset range into positve and negative ranges by using delta
+                // move it forward or back by delta /2 depending on bit
+                                
                 let index = y * width + x
                 
                 changePixelValue(rgba, index: index, sign: bit!, delta: smallDelta);

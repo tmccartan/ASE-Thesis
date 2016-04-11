@@ -16,6 +16,7 @@
 		7096D4291CB91CC0003ACD60 /* MetalStegoFilterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7096D4281CB91CC0003ACD60 /* MetalStegoFilterUITests.swift */; };
 		7096D43A1CB927CC003ACD60 /* MetalTexture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7096D4391CB927CC003ACD60 /* MetalTexture.swift */; };
 		7096D43B1CB940AC003ACD60 /* StegoFilter.metal in Resources */ = {isa = PBXBuildFile; fileRef = 7096D4371CB91D85003ACD60 /* StegoFilter.metal */; };
+		7096D4531CBC0495003ACD60 /* jakeTwit.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7096D4521CBC0495003ACD60 /* jakeTwit.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		7096D42A1CB91CC0003ACD60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7096D4371CB91D85003ACD60 /* StegoFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = StegoFilter.metal; sourceTree = "<group>"; };
 		7096D4391CB927CC003ACD60 /* MetalTexture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalTexture.swift; sourceTree = "<group>"; };
+		7096D4521CBC0495003ACD60 /* jakeTwit.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jakeTwit.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				7096D4391CB927CC003ACD60 /* MetalTexture.swift */,
 				7096D40C1CB91CC0003ACD60 /* Main.storyboard */,
 				7096D40F1CB91CC0003ACD60 /* Assets.xcassets */,
+				7096D4521CBC0495003ACD60 /* jakeTwit.jpg */,
 				7096D4111CB91CC0003ACD60 /* LaunchScreen.storyboard */,
 				7096D4141CB91CC0003ACD60 /* Info.plist */,
 			);
@@ -207,6 +210,7 @@
 				TargetAttributes = {
 					7096D4041CB91CC0003ACD60 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = K28867HZE6;
 					};
 					7096D4181CB91CC0003ACD60 = {
 						CreatedOnToolsVersion = 7.3;
@@ -247,6 +251,7 @@
 				7096D4131CB91CC0003ACD60 /* LaunchScreen.storyboard in Resources */,
 				7096D4101CB91CC0003ACD60 /* Assets.xcassets in Resources */,
 				7096D40E1CB91CC0003ACD60 /* Main.storyboard in Resources */,
+				7096D4531CBC0495003ACD60 /* jakeTwit.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,10 +420,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MetalStegoFilter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ucd.MetalStegoFilter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -426,10 +434,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MetalStegoFilter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ucd.MetalStegoFilter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
