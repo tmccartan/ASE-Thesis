@@ -17,6 +17,8 @@
 		7096D43A1CB927CC003ACD60 /* MetalTexture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7096D4391CB927CC003ACD60 /* MetalTexture.swift */; };
 		7096D43B1CB940AC003ACD60 /* StegoFilter.metal in Resources */ = {isa = PBXBuildFile; fileRef = 7096D4371CB91D85003ACD60 /* StegoFilter.metal */; };
 		7096D4531CBC0495003ACD60 /* jakeTwit.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7096D4521CBC0495003ACD60 /* jakeTwit.jpg */; };
+		7096D4551CBD4A40003ACD60 /* jakeLarge.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7096D4541CBD4A40003ACD60 /* jakeLarge.jpg */; };
+		7096D4571CBD4CB5003ACD60 /* jakeMedium.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7096D4561CBD4CB5003ACD60 /* jakeMedium.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		7096D4371CB91D85003ACD60 /* StegoFilter.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = StegoFilter.metal; sourceTree = "<group>"; };
 		7096D4391CB927CC003ACD60 /* MetalTexture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetalTexture.swift; sourceTree = "<group>"; };
 		7096D4521CBC0495003ACD60 /* jakeTwit.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jakeTwit.jpg; sourceTree = "<group>"; };
+		7096D4541CBD4A40003ACD60 /* jakeLarge.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jakeLarge.jpg; sourceTree = "<group>"; };
+		7096D4561CBD4CB5003ACD60 /* jakeMedium.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jakeMedium.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,13 +107,13 @@
 		7096D4071CB91CC0003ACD60 /* MetalStegoFilter */ = {
 			isa = PBXGroup;
 			children = (
+				7096D4581CBD4CBF003ACD60 /* images */,
 				7096D4361CB91D75003ACD60 /* Shaders */,
 				7096D4081CB91CC0003ACD60 /* AppDelegate.swift */,
 				7096D40A1CB91CC0003ACD60 /* ViewController.swift */,
 				7096D4391CB927CC003ACD60 /* MetalTexture.swift */,
 				7096D40C1CB91CC0003ACD60 /* Main.storyboard */,
 				7096D40F1CB91CC0003ACD60 /* Assets.xcassets */,
-				7096D4521CBC0495003ACD60 /* jakeTwit.jpg */,
 				7096D4111CB91CC0003ACD60 /* LaunchScreen.storyboard */,
 				7096D4141CB91CC0003ACD60 /* Info.plist */,
 			);
@@ -140,6 +144,16 @@
 				7096D4371CB91D85003ACD60 /* StegoFilter.metal */,
 			);
 			name = Shaders;
+			sourceTree = "<group>";
+		};
+		7096D4581CBD4CBF003ACD60 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				7096D4561CBD4CB5003ACD60 /* jakeMedium.jpg */,
+				7096D4521CBC0495003ACD60 /* jakeTwit.jpg */,
+				7096D4541CBD4A40003ACD60 /* jakeLarge.jpg */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,8 +263,10 @@
 			files = (
 				7096D43B1CB940AC003ACD60 /* StegoFilter.metal in Resources */,
 				7096D4131CB91CC0003ACD60 /* LaunchScreen.storyboard in Resources */,
+				7096D4571CBD4CB5003ACD60 /* jakeMedium.jpg in Resources */,
 				7096D4101CB91CC0003ACD60 /* Assets.xcassets in Resources */,
 				7096D40E1CB91CC0003ACD60 /* Main.storyboard in Resources */,
+				7096D4551CBD4A40003ACD60 /* jakeLarge.jpg in Resources */,
 				7096D4531CBC0495003ACD60 /* jakeTwit.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

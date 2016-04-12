@@ -86,7 +86,7 @@ class ViewController: UIViewController {
         let end  = NSDate();
         let timeInterval: Double = end.timeIntervalSinceDate(start);
         print("Time to embed : \(timeInterval) seconds");
-        imageview.image = finalImage;   
+        imageview.image = finalImage;
     }
 
     override func didReceiveMemoryWarning() {

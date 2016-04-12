@@ -54,17 +54,8 @@ class ViewController: UIViewController {
         // need to embed the identifer that will speed up image checking
         // the length of text to extract
         // the message itself
-        let capactyByte1 = UInt16(secretMessage.characters.count)
-        let b1 = UInt8(capactyByte1 >> 8)
-        let b2 = UInt8(capactyByte1 & 0x00ff)
         
-        let num = UInt16(b1) << 8 | UInt16(b2)
-        let identifierString = "StegoTweet"
-        
-        var buf = [UInt8](identifierString.utf8);
-        buf.append(b1)
-        buf.append(b2)
-        buf.appendContentsOf(secretMessage.utf8)
+        let buf = createSecretMessageBytes(width * height);
         
         // need to embed byte
         for byte in buf {
@@ -128,6 +119,22 @@ class ViewController: UIViewController {
         }
         rgba.pixels[index] = pixel
     }
+    func createSecretMessageBytes (maxSize : Int) -> [UInt8] {
+        let capactyByte1 = UInt16(secretMessage.characters.count)
+        let b1 = UInt8(capactyByte1 >> 8)
+        let b2 = UInt8(capactyByte1 & 0x00ff)
+        
+        let identifierString = "StegoTweet"
+        
+        var totalBuffer = [UInt8](count: maxSize, repeatedValue: 0)
+        var buf = [UInt8](identifierString.utf8);
+        buf.append(b1)
+        buf.append(b2)
+        buf.appendContentsOf(secretMessage.utf8)
+        totalBuffer[0..<buf.count] = buf[0..<buf.count]
+        return totalBuffer
+    }
+
     func decipherImage(){
         // read all pixels into array
         // foreach pixel
