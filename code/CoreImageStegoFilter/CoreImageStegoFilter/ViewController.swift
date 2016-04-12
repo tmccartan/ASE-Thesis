@@ -39,7 +39,7 @@ class ViewController: UIViewController {
         
         let rgba = RGBA(image: image)!
         
-        
+        let start = NSDate();
         let height = Int(image.size.height)
         let width  = Int(image.size.width)
         
@@ -76,15 +76,20 @@ class ViewController: UIViewController {
                 // if bit is 0 move it towards the center of the nearest negative interval
                 // if bit is 1 move the pixel toward the center of the nearest postive interval 
                 
+                let index = y * width + x
            
                 let dither = rand() % (maxNumber + 1 - minNumber) + minNumber
-                let offsetRange = 255 - dither
+                if bit == 1 {
+                     changePixelValue(rgba, index: index, sign: bit!, delta: 1);
+                }
+                else{
+                     changePixelValue(rgba, index: index, sign: bit!, delta: 2);
+                }
+                // if 1 -> r - (r % smallDelta) + smallDelta / 2
+                // if 0 -> r
+                
                 // break offset range into positve and negative ranges by using delta
                 // move it forward or back by delta /2 depending on bit
-                                
-                let index = y * width + x
-                
-                changePixelValue(rgba, index: index, sign: bit!, delta: smallDelta);
                 
                 if( (x + 1) != width) {
                     x += 1
@@ -100,8 +105,11 @@ class ViewController: UIViewController {
 
             }
         }
-        
-        return rgba.toUIImage()!
+        let finalImage =  rgba.toUIImage()!
+        let end = NSDate();
+        let timeInterval: Double = end.timeIntervalSinceDate(start);
+        print("Time to embed : \(timeInterval) seconds");
+        return finalImage;
     }
     func changePixelValue(rgba: RGBA, index: Int, sign: Int, delta:UInt8) {
         var pixel = rgba.pixels[index]

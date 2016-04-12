@@ -22,6 +22,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         // (1) - Get Reference to the device
+        let start = NSDate();
+        
         let device: MTLDevice = MTLCreateSystemDefaultDevice()!
         // Create a default library
         let defaultLibrary: MTLLibrary = device.newDefaultLibrary()!
@@ -80,8 +82,11 @@ class ViewController: UIViewController {
        
         commandBuffer.commit();
         commandBuffer.waitUntilCompleted()
-        imageview.image = destImageTexture.image()
-        // Do any additional setup after loading the view, typically from a nib.
+        let finalImage = destImageTexture.image()
+        let end  = NSDate();
+        let timeInterval: Double = end.timeIntervalSinceDate(start);
+        print("Time to embed : \(timeInterval) seconds");
+        imageview.image = finalImage;   
     }
 
     override func didReceiveMemoryWarning() {
