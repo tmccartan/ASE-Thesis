@@ -13,13 +13,31 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var imageview: UIImageView!
 
-    let secretMessage: String = "This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message, "
+    var secretMessage: String = "This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message, "
     let image = CIImage(image: UIImage(named: "jakeTwit")!)
+    
+    let string_500 = "oweOA0OQg81Cnjgg9nGeP2qA8gZswCzinTUeWXnnyMGiwcD3p6VMRQXSTiDGHjSwIZTM40RiNM1MF56PywhgIb7x7EkDPYUEpW1rv2WzVyENDcy1YUK5xo2GZtDgimEErIh5TtkUbo3mHA2ctm08vzg5esqstL2NK2pB30stJ8XoLRGQ97CHhVPDfaPzuAKTvFG8ySvU3cjIwkZvlEIlRhVchKezMe5rxpbFitlDcEr4f7qQDMhOqrq9iAe5BBgJ6oWg1eucPaFDxel2llWVk9m5Joo1WiGwbquBSRsfXlPz5gx4RjYHxAKQTeHZaOORLx4avvWXZvvYDTKClXTcWgUX5MtBbZ7IY94PHAvgTk6jBAt6XsFWAzi9yUTvxangqmoRKvijuiA8Y9AOSs88ax4VSNXAHzjZiP7MMk8kghbCOVOGgApURsf8mKHibCEEgrPwL7GZrO67Dg9v2uaPHXiJQzx68yu4rMTrkMyFGxQtIDDrhzR5"
+    let string_250 = "8j1WsYsXSxfI9BYsu8F6EEUL4ouxyxLFcWuk7lK5czsy6OeJWQ9lQqrqzh7ZUPEQyYQqmzka5y7WcmA2Yog9pjgtSwX9mm1MatiKsyJcGnCBCwmRYs1fSRtU4iotXoMAD7UzRuaIKI3hrzTwRVtfRnAlzwCgaK7TskjiOJrpUHjfiPUBhzIKsLMX5peI0xXvbCGzGj58hSXHferVIUGkBC4mSKeBL6fja82HvRhlRDyU09VFiNUkAR39PX"
+    let string_100 = "pOfb33BE2OD0Cf7UgSxMNvysADyLi6N0NgwmLyeB2gIWsr1HuVC87o200VFEOvPMvuIhEhyubBe65z49fKZS9lpQix32xJQ1GeHx"
+    
+
+
+    let imageSmall = "jakeTwit"
+    let imageMed = "jakeMedium"
+    let imageLarge =  "jakeLarge"
+    
+    var imageTarget = "jakeLarge"
     let seed = 10
-    var destImageTexture = MetalTexture(resourceName: "jakeTwit", ext: ".jpg", mipmaped: false);
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        secretMessage = string_500
+        let destImageTexture = MetalTexture(resourceName: imageTarget, ext: ".jpg", mipmaped: false);
+        //source image texture container
+        let sourceImageTexture = MetalTexture(resourceName: imageTarget, ext: ".jpg", mipmaped: false)
         
         // (1) - Get Reference to the device
         let start = NSDate();
@@ -41,8 +59,7 @@ class ViewController: UIViewController {
         let commandEncoder: MTLComputeCommandEncoder = commandBuffer.computeCommandEncoder()
         commandEncoder.setComputePipelineState(pipelineState)
                 
-        //source image texture container
-        let sourceImageTexture = MetalTexture(resourceName: "jakeTwit", ext: ".jpg", mipmaped: false)
+       
        // destImageTexture = MetalTexture(resourceName: "jakeTwit", ext: ".jpg", mipmaped: false)
         
      

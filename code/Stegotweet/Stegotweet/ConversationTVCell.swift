@@ -16,10 +16,11 @@ class ConversationTVCell : UITableViewCell {
             updateCell()
         }
     }
-    
     @IBOutlet weak var name: UILabel!
     
+    @IBOutlet weak var profileImage: UIImageView!
+    
     private func updateCell() {
-        name.text = conversationModel!.name
+        //name.text = conversationModel!.name
     }
 }

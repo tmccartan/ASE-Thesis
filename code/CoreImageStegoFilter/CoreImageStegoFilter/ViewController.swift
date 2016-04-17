@@ -10,15 +10,22 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    let secretMessage: String = "This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message, "
-    let image = CIImage(image: UIImage(named: "jakeTwit")!)
+    var secretMessage: String = "This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message,This is a secret message, "
+    
+    let string_500 = "oweOA0OQg81Cnjgg9nGeP2qA8gZswCzinTUeWXnnyMGiwcD3p6VMRQXSTiDGHjSwIZTM40RiNM1MF56PywhgIb7x7EkDPYUEpW1rv2WzVyENDcy1YUK5xo2GZtDgimEErIh5TtkUbo3mHA2ctm08vzg5esqstL2NK2pB30stJ8XoLRGQ97CHhVPDfaPzuAKTvFG8ySvU3cjIwkZvlEIlRhVchKezMe5rxpbFitlDcEr4f7qQDMhOqrq9iAe5BBgJ6oWg1eucPaFDxel2llWVk9m5Joo1WiGwbquBSRsfXlPz5gx4RjYHxAKQTeHZaOORLx4avvWXZvvYDTKClXTcWgUX5MtBbZ7IY94PHAvgTk6jBAt6XsFWAzi9yUTvxangqmoRKvijuiA8Y9AOSs88ax4VSNXAHzjZiP7MMk8kghbCOVOGgApURsf8mKHibCEEgrPwL7GZrO67Dg9v2uaPHXiJQzx68yu4rMTrkMyFGxQtIDDrhzR5"
+    let string_250 = "8j1WsYsXSxfI9BYsu8F6EEUL4ouxyxLFcWuk7lK5czsy6OeJWQ9lQqrqzh7ZUPEQyYQqmzka5y7WcmA2Yog9pjgtSwX9mm1MatiKsyJcGnCBCwmRYs1fSRtU4iotXoMAD7UzRuaIKI3hrzTwRVtfRnAlzwCgaK7TskjiOJrpUHjfiPUBhzIKsLMX5peI0xXvbCGzGj58hSXHferVIUGkBC4mSKeBL6fja82HvRhlRDyU09VFiNUkAR39PX"
+    let string_100 = "pOfb33BE2OD0Cf7UgSxMNvysADyLi6N0NgwmLyeB2gIWsr1HuVC87o200VFEOvPMvuIhEhyubBe65z49fKZS9lpQix32xJQ1GeHx"
+    
+    
+    let imageSmall = UIImage(named: "jakeTwit")
+    let imageMed = UIImage(named: "jakeMedium")
+    let imageLarge = UIImage(named: "jakeLarge")
     let delta = 15
     
     @IBOutlet weak var imageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        imageView.image = UIImage(CIImage: image!)
         imageView.image = embedImage(1)
     }
 
@@ -35,8 +42,8 @@ class ViewController: UIViewController {
     
     func embedImage(seed :Int) -> UIImage{
         
-        let image = UIImage(named: "jakeTwit")!
-        
+        let image = imageLarge!
+        secretMessage = string_500
         let rgba = RGBA(image: image)!
         
         let start = NSDate();
@@ -71,10 +78,10 @@ class ViewController: UIViewController {
            
                 let dither = rand() % (maxNumber + 1 - minNumber) + minNumber
                 if bit == 1 {
-                     changePixelValue(rgba, index: index, sign: bit!, delta: 1);
+                     changePixelValue(rgba, index: index, sign: bit!, delta: smallDelta);
                 }
                 else{
-                     changePixelValue(rgba, index: index, sign: bit!, delta: 2);
+                     changePixelValue(rgba, index: index, sign: bit!, delta: (smallDelta));
                 }
                 // if 1 -> r - (r % smallDelta) + smallDelta / 2
                 // if 0 -> r
@@ -89,6 +96,7 @@ class ViewController: UIViewController {
                     x = 0;
                     if(y + 1 == height){
                         //Out of space throw exception
+                        print("Out of possible emdedding space")
                         break;
                     }
                     y += 1
@@ -107,15 +115,15 @@ class ViewController: UIViewController {
         
         if(sign == 0){
             //postive quantizer
-            pixel.red = pixel.red == 255 ? 255 : pixel.red + delta
-            pixel.green = pixel.green == 255 ? 255 : pixel.red + delta
-            pixel.blue = pixel.blue == 255 ? 255 : pixel.red + delta
+            pixel.red = pixel.red >= 254 ? 254 : pixel.red + delta
+            pixel.green = pixel.green >= 254 ? 254 : pixel.green + delta
+            pixel.blue = pixel.blue >= 254 ? 254 : pixel.blue + delta
         }
         else {
             //negative quantizer
             pixel.red = pixel.red == 0 ? 0 : pixel.red - delta
-            pixel.green = pixel.green == 0 ? 0 : pixel.red - delta
-            pixel.blue = pixel.blue == 0 ? 0 : pixel.red - delta
+            pixel.green = pixel.green == 0 ? 0 : pixel.green - delta
+            pixel.blue = pixel.blue == 0 ? 0 : pixel.blue - delta
         }
         rgba.pixels[index] = pixel
     }
@@ -132,6 +140,7 @@ class ViewController: UIViewController {
         buf.append(b2)
         buf.appendContentsOf(secretMessage.utf8)
         totalBuffer[0..<buf.count] = buf[0..<buf.count]
+        print(totalBuffer.count)
         return totalBuffer
     }
 

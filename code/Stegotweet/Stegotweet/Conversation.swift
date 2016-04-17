@@ -16,6 +16,6 @@ public struct Conversation {
     var user : String
     var created_at : NSDate
     var last_updated_at : NSDate
-    var lines : [Line]
+    var image : String
 }
     
