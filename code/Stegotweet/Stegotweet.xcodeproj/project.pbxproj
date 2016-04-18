@@ -30,6 +30,8 @@
 		70BC855C1C63CF7000018AFA /* ImageDecipherVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BC855B1C63CF7000018AFA /* ImageDecipherVC.swift */; };
 		70BC855E1C63CF8000018AFA /* ImageEmbedderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BC855D1C63CF8000018AFA /* ImageEmbedderVC.swift */; };
 		70BC85601C63CF9800018AFA /* ChatTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BC855F1C63CF9800018AFA /* ChatTVC.swift */; };
+		70BF43211CC54C54004DBD68 /* LeftUnlockedTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BF43201CC54C54004DBD68 /* LeftUnlockedTVC.swift */; };
+		70BF43261CC54C63004DBD68 /* RightUnlockedTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BF43251CC54C63004DBD68 /* RightUnlockedTVC.swift */; };
 		70FF637A1CC3FE6500F9E767 /* LeftLockedTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FF63791CC3FE6500F9E767 /* LeftLockedTVC.swift */; };
 		70FF637C1CC3FEF900F9E767 /* RightLockedTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70FF637B1CC3FEF900F9E767 /* RightLockedTVC.swift */; };
 /* End PBXBuildFile section */
@@ -117,6 +119,8 @@
 		70BC855B1C63CF7000018AFA /* ImageDecipherVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDecipherVC.swift; sourceTree = "<group>"; };
 		70BC855D1C63CF8000018AFA /* ImageEmbedderVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageEmbedderVC.swift; sourceTree = "<group>"; };
 		70BC855F1C63CF9800018AFA /* ChatTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatTVC.swift; sourceTree = "<group>"; };
+		70BF43201CC54C54004DBD68 /* LeftUnlockedTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftUnlockedTVC.swift; sourceTree = "<group>"; };
+		70BF43251CC54C63004DBD68 /* RightUnlockedTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightUnlockedTVC.swift; sourceTree = "<group>"; };
 		70FF63791CC3FE6500F9E767 /* LeftLockedTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftLockedTVC.swift; sourceTree = "<group>"; };
 		70FF637B1CC3FEF900F9E767 /* RightLockedTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightLockedTVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -247,6 +251,8 @@
 				7096D4621CC3F15B003ACD60 /* UnlockedConversationVC.swift */,
 				70FF63791CC3FE6500F9E767 /* LeftLockedTVC.swift */,
 				70FF637B1CC3FEF900F9E767 /* RightLockedTVC.swift */,
+				70BF43201CC54C54004DBD68 /* LeftUnlockedTVC.swift */,
+				70BF43251CC54C63004DBD68 /* RightUnlockedTVC.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -434,10 +440,12 @@
 				7098306D1C6A31A3006E37CD /* Conversation.swift in Sources */,
 				7096D4631CC3F15B003ACD60 /* UnlockedConversationVC.swift in Sources */,
 				7096D43D1CB98D25003ACD60 /* EmojiConverter.swift in Sources */,
+				70BF43211CC54C54004DBD68 /* LeftUnlockedTVC.swift in Sources */,
 				70FF637A1CC3FE6500F9E767 /* LeftLockedTVC.swift in Sources */,
 				70271FCF1C7B74840079DD9B /* CIStegoFilter.swift in Sources */,
 				70BC85581C63CF4000018AFA /* ConversationVC.swift in Sources */,
 				70BC855C1C63CF7000018AFA /* ImageDecipherVC.swift in Sources */,
+				70BF43261CC54C63004DBD68 /* RightUnlockedTVC.swift in Sources */,
 				7096D4611CC3F149003ACD60 /* LockedConversationVC.swift in Sources */,
 				709830721C6A3AA8006E37CD /* ConversationTVCell.swift in Sources */,
 				7004B9351C44154500583D09 /* AppDelegate.swift in Sources */,

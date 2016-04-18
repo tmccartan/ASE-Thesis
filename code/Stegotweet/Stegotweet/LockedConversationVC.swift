@@ -39,11 +39,21 @@ class LockedConversationVC : UIViewController, UITableViewDataSource, UITableVie
         thread2.name = "Sue";
         thread2.content = "blah blah blah";
         thread2.image = "jakeMedium"
+        let thread3 = Thread()
+        thread3.name = "Sue";
+        thread3.content = "blah blah blah";
+        thread3.image = "jakeMedium"
+        let thread4 = Thread()
+        thread4.name = "John";
+        thread4.content = "blah blah blah";
+        thread4.image = "jakeMedium"
         threads.append(thread1)
         threads.append(thread2)
-        
+        threads.append(thread3)
+        threads.append(thread4)
         tableView.dataSource = self
         tableView.delegate = self
+        self.automaticallyAdjustsScrollViewInsets = false
 
     }
     
@@ -65,12 +75,16 @@ class LockedConversationVC : UIViewController, UITableViewDataSource, UITableVie
             let cell = tableView.dequeueReusableCellWithIdentifier("LeftConL", forIndexPath: indexPath) as! LeftLockedTVC
             cell.textContent.text = "Left - "+conversation.content
             cell.imageContent.image = UIImage(named: conversation.image)
+            cell.profileImage.image = UIImage(named: "profile1")
+            cell.profileImage.clipsToBounds = true
+            
             return cell
         }
         else {
             let cell = tableView.dequeueReusableCellWithIdentifier("RightConL", forIndexPath: indexPath) as! RightLockedTVC
             cell.textContent.text =  "Right - "+conversation.content
             cell.imageContent.image = UIImage(named: conversation.image)
+            cell.profileImage.image = UIImage(named: "profile2")
             return cell
         }
         

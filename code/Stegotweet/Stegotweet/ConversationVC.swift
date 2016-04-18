@@ -38,9 +38,7 @@ class ConversationVC :  UIViewController, UITableViewDataSource, UITableViewDele
         
         conversationTV.dataSource = self
         conversationTV.delegate = self
-       // conversationTV.registerClass(ConversationTVCell.self, forCellReuseIdentifier: "cell")
-        
-
+        self.automaticallyAdjustsScrollViewInsets = false
     }
     
     override func didReceiveMemoryWarning() {
