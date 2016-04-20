@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     let imageMed = "jakeMedium"
     let imageLarge =  "jakeLarge"
     
-    var imageTarget = "jakeLarge"
+    var imageTarget = "jakeTwit"
     let seed = 10
     
     
@@ -122,7 +122,7 @@ class ViewController: UIViewController {
         
         let identifierString = "StegoTweet"
         
-        var totalBuffer = [UInt8](count: maxSize, repeatedValue: 0)
+        var totalBuffer = [UInt8](count: maxSize, repeatedValue: 1)
         var buf = [UInt8](identifierString.utf8);
         buf.append(b1)
         buf.append(b2)

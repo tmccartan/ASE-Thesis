@@ -42,7 +42,7 @@ class ViewController: UIViewController {
     
     func embedImage(seed :Int) -> UIImage{
         
-        let image = imageLarge!
+        let image = imageSmall!
         secretMessage = string_500
         let rgba = RGBA(image: image)!
         
@@ -52,8 +52,7 @@ class ViewController: UIViewController {
         
         let maxNumber = 1
         let minNumber = 0
-        let delta:UInt8 = 15
-        let smallDelta:UInt8 = 1
+        let delta = 15
         var x = 0;
         var y = 0;
         
@@ -69,19 +68,27 @@ class ViewController: UIViewController {
             let strBits = String(UInt(byte), radix: 2);
             let bits = strBits.characters.map { Int(String($0)) }
             for bit in bits {
-                // 255 -dither
-                // break into ranges of - for 0 bit  and + for 1
-                // if bit is 0 move it towards the center of the nearest negative interval
-                // if bit is 1 move the pixel toward the center of the nearest postive interval 
                 
                 let index = y * width + x
            
                 let dither = rand() % (maxNumber + 1 - minNumber) + minNumber
+                let ditheredRange = Int(delta) - Int(dither)
+               
+                var pixel = rgba.pixels[index]
+                
                 if bit == 1 {
-                     changePixelValue(rgba, index: index, sign: bit!, delta: smallDelta);
+                    //if bit is 1 move the pixel toward the center of the nearest postive interval
+                    pixel.red = UInt8(quantize(Int(pixel.red), quantum: ditheredRange, cover: true))
+                    pixel.green = UInt8(quantize(Int(pixel.green), quantum: ditheredRange, cover: true))
+                    pixel.blue = UInt8(quantize(Int(pixel.blue), quantum: ditheredRange, cover: true))
+
                 }
                 else{
-                     changePixelValue(rgba, index: index, sign: bit!, delta: (smallDelta));
+                    //if bit is 0 move it towards the center of the nearest negative interval
+                    pixel.red = UInt8(quantize(Int(pixel.red), quantum: ditheredRange, cover: false))
+                    pixel.green = UInt8(quantize(Int(pixel.green), quantum: ditheredRange, cover: false))
+                    pixel.blue = UInt8(quantize(Int(pixel.blue), quantum: ditheredRange, cover: false))
+
                 }
                 // if 1 -> r - (r % smallDelta) + smallDelta / 2
                 // if 0 -> r
@@ -127,6 +134,14 @@ class ViewController: UIViewController {
         }
         rgba.pixels[index] = pixel
     }
+    
+    func quantize(val:Int, quantum: Int, cover: Bool) -> Int {
+        let remainder = val % quantum;
+        let sign = val >= 0 ? 1 : -1;
+        
+        let mod = cover && remainder > 0 ? quantum : 0;
+        return val - remainder + sign * mod;
+    }
     func createSecretMessageBytes (maxSize : Int) -> [UInt8] {
         let capactyByte1 = UInt16(secretMessage.characters.count)
         let b1 = UInt8(capactyByte1 >> 8)
@@ -144,6 +159,7 @@ class ViewController: UIViewController {
         return totalBuffer
     }
 
+    
     func decipherImage(){
         // read all pixels into array
         // foreach pixel

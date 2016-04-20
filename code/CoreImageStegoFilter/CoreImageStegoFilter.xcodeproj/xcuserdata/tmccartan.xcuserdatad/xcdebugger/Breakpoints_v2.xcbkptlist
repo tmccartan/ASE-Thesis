@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CoreImageStegoFilter/ViewController.swift"
-            timestampString = "482170482.115124"
+            timestampString = "482704592.87042"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
             landmarkName = "embedImage(_:)"
             landmarkType = "5">
          </BreakpointContent>
