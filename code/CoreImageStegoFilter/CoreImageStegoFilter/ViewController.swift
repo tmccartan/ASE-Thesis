@@ -56,14 +56,10 @@ class ViewController: UIViewController {
         var x = 0;
         var y = 0;
         
+      
+       
         srand(UInt32(seed));
-        // need to embed the identifer that will speed up image checking
-        // the length of text to extract
-        // the message itself
-        
         let buf = createSecretMessageBytes(width * height);
-        
-        // need to embed byte
         for byte in buf {
             let strBits = String(UInt(byte), radix: 2);
             let bits = strBits.characters.map { Int(String($0)) }
@@ -75,37 +71,19 @@ class ViewController: UIViewController {
                 let ditheredRange = Int(delta) - Int(dither)
                
                 var pixel = rgba.pixels[index]
-                
-                if bit == 1 {
-                    //if bit is 1 move the pixel toward the center of the nearest postive interval
-                    pixel.red = UInt8(quantize(Int(pixel.red), quantum: ditheredRange, cover: true))
-                    pixel.green = UInt8(quantize(Int(pixel.green), quantum: ditheredRange, cover: true))
-                    pixel.blue = UInt8(quantize(Int(pixel.blue), quantum: ditheredRange, cover: true))
-
-                }
-                else{
-                    //if bit is 0 move it towards the center of the nearest negative interval
-                    pixel.red = UInt8(quantize(Int(pixel.red), quantum: ditheredRange, cover: false))
-                    pixel.green = UInt8(quantize(Int(pixel.green), quantum: ditheredRange, cover: false))
-                    pixel.blue = UInt8(quantize(Int(pixel.blue), quantum: ditheredRange, cover: false))
-
-                }
-                // if 1 -> r - (r % smallDelta) + smallDelta / 2
-                // if 0 -> r
-                
-                // break offset range into positve and negative ranges by using delta
-                // move it forward or back by delta /2 depending on bit
+                let cover = bit == 1 ? true : false
+               
+                //if bit is 1 move the pixel toward the center of the nearest postive interval, 0 
+                // move it away
+                pixel.red = UInt8(quantize(Int(pixel.red), quantum: ditheredRange, cover: cover))
+                pixel.green = UInt8(quantize(Int(pixel.green), quantum: ditheredRange, cover: cover))
+                pixel.blue = UInt8(quantize(Int(pixel.blue), quantum: ditheredRange, cover: cover))
                 
                 if( (x + 1) != width) {
                     x += 1
                 }
                 else {
                     x = 0;
-                    if(y + 1 == height){
-                        //Out of space throw exception
-                        print("Out of possible emdedding space")
-                        break;
-                    }
                     y += 1
                 }
 

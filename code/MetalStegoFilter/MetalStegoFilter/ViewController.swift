@@ -81,8 +81,7 @@ class ViewController: UIViewController {
         let ditherBuffer =  device.newBufferWithBytes(
             ditherValues, length: ditherValues.count, options:[])
         
-        let sampler = defaultSampler(device)
-        commandEncoder.setSamplerState(sampler, atIndex: 0);
+        
         commandEncoder.setTexture(sourceImageTexture.texture, atIndex: 0);
         commandEncoder.setTexture(destImageTexture.texture, atIndex: 1);
         commandEncoder.setBuffer(secretMessageBuffer, offset: 0, atIndex: 0);

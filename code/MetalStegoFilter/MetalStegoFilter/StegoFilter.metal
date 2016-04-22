@@ -26,7 +26,6 @@ half quantize(half val, half quantum, bool cover) {
 
 kernel void stego_embded_image( texture2d<half, access::sample> source_texture [[texture(0)]],
                                 texture2d<half, access::write> dest_texture [[texture(1)]],
-                                sampler sampler_2d [[ sampler(0) ]],
                                 constant int &message_byte [[buffer(0)]],
                                 constant int &dither [[buffer(1)]],
                                 uint2 gid [[thread_position_in_grid]])
